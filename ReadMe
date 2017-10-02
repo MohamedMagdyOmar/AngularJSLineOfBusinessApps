@@ -30,3 +30,20 @@
             - retrieve the products, achieved by calling back end web service
         2- Implements the "Method" for any action that the "View" can perform
             - Implement the method responsible for Hide/Show Images.
+
+
+3- Organising the project structure:
+    - app directory:
+        - contains the code specific to this application
+        - has subdirectory for each primary feature in the app
+    - common directory:
+        - contains the code common to all parts of the application
+        - "service" subdirectory define the location of common services or BL services
+
+    - Css directory
+    - fonts directory
+    - images directory
+    - js directory
+        - for external java script files like "angular.js" or any other third party library
+    - index.html:
+        - contain all of the references, and launching point for our application
