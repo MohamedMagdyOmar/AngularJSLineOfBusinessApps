@@ -10,7 +10,7 @@
     i- make sure that basic knowledge of angular is understood.
 
 
-2- turn business requirements into a "View", "Model", and "Controller":
+a- turn business requirements into a "View", "Model", and "Controller":
     - first step is to collect the requirements.
     - use this requirements to details appropriate user stories.
     - sample of the user stories:
@@ -32,7 +32,7 @@
             - Implement the method responsible for Hide/Show Images.
 
 
-3- Organising the project structure:
+b- Organising the project structure:
     - app directory:
         - contains the code specific to this application
         - has subdirectory for each primary feature in the app
@@ -47,3 +47,11 @@
         - for external java script files like "angular.js" or any other third party library
     - index.html:
         - contain all of the references, and launching point for our application
+
+c- build the View using the appropriate directives.
+    - in general the "View" refer to user interface in the app
+    - it is used to describe both the HTML that contain the user interface markup and page generated from this html
+    - some angular js documentation make a distinction:
+        - a piece of html that contains user interface markup and angular directives is called a "template"
+        - the loaded and transferred nad rendered result is called the "View" or "live template".
+    finally: if you want to build full featured angular app we need to define that app using a "Module"
