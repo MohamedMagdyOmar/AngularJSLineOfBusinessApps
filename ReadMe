@@ -29,4 +29,4 @@
         1- Define the "Model" required by the "View", so the "Controller" contains the Views-Model.
             - retrieve the products, achieved by calling back end web service
         2- Implements the "Method" for any action that the "View" can perform
-            - Implement the method responsible for Hide/Show Images,
+            - Implement the method responsible for Hide/Show Images.
