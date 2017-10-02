@@ -1,0 +1,32 @@
+1- Module 2 Objectives:
+    a- turn business requirements into a View, Model and Controller.
+    b- Organise the project structure.
+    c- build the View using the appropriate directives.
+    d- define the main Module of the application.
+    e- Build the Controller.
+    f- Define the Model.
+    g- Implement the methods for the action on the page.
+    h- Style the view with bootstrap.
+    i- make sure that basic knowledge of angular is understood.
+
+
+2- turn business requirements into a "View", "Model", and "Controller":
+    - first step is to collect the requirements.
+    - use this requirements to details appropriate user stories.
+    - sample of the user stories:
+        - As a product manager, i can:
+            - "Browse" the list of products.
+            - See the product "images".
+            - "Select" a product to "view" details.
+            - "Select" a product to "edit" details.
+    - from these user stories we will generate mocked up "user interface" design [check the video]
+    - from point 1-a we need to turn above user stories into "View", "Model", and "Controller".
+    - the "View" will be the user interface design.
+    - the "Model" will be the JSON file that hold the data for us.
+    - the "Controller" will define the "data" and the "code" of the actions of the views.
+
+    - the Controller roles are:
+        1- Define the "Model" required by the "View", so the "Controller" contains the Views-Model.
+            - retrieve the products, achieved by calling back end web service
+        2- Implements the "Method" for any action that the "View" can perform
+            - Implement the method responsible for Hide/Show Images,
