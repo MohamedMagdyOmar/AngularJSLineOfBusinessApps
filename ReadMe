@@ -54,4 +54,27 @@ c- build the View using the appropriate directives.
     - some angular js documentation make a distinction:
         - a piece of html that contains user interface markup and angular directives is called a "template"
         - the loaded and transferred nad rendered result is called the "View" or "live template".
-    finally: if you want to build full featured angular app we need to define that app using a "Module"
+    finally: if you want to build full featured angular app we need to define that app using a "Module".
+
+d- define the main Module of the application.
+    - it defines an angular application
+    - most angular app has one main module, but they can reference any number of other module.
+    - it tracks all of the application code, that can be done using "registration process", each
+      piece of application code is built, it can register itself in the module.
+    - track all dependencies for the application
+    - keeps the application modularized
+    ANGULAR MODULE METHOD:
+        angular.module("productManagement", [])
+        - when defining a module, the module method required 2 parameters
+            - first is the "module name"
+            - array of dependencies [reference to any other module or library that this module uses known also as "injectables"
+            because angular injects them into the parts of the application that needs them]
+            - the above syntax is know as "setter method", because it is the syntax to define or set
+            angular module
+
+        angular.module("productManagement");
+            - this is with one parameter not 2 as previous
+            - this useful when registering other code, such as controller
+            - it is called getter method for angular module, because it is used to get the reference to that module
+
+        - the module is defined in a file called app.js
