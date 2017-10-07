@@ -78,3 +78,49 @@ d- define the main Module of the application.
             - it is called getter method for angular module, because it is used to get the reference to that module
 
         - the module is defined in a file called app.js
+
+
+e- Build the Controller.
+    - controller provide support to the view
+    - it defines the model required by the view
+    - it retrieve data as needed and expose it to the view to use for binding
+    - in the app it will provide the "product data"
+    - it implements the methods for the actions that the view perform (eg. hide and show images)
+    How do you build controller that can define the model and implement the actions for the view?
+    - first: define "controller function" that contains the definition of the model, and the methods
+    for the actions that the view can perform
+    - once the "controller function" is created the view identifies its controller function using
+    "ng-controller" directives
+    - the "controller function" can be defined in the "global namespace" [for prototypes only] or "registered with a module".
+    - for building controller function:
+        (function(){
+            angular.module("productManagement").controller("ProductListCtrl",["$scope", function($scope){
+            }]);
+        }())
+        - define IIFE function expression
+        - look up the module [to register the controller with the module] using module "getter" syntax
+        - register the controller with the module using the "controller" method of the module.
+            - the first parameter is the controller name
+            - the second parameter is an array, first element in the array is the name of the parameters to the controller function
+            - in this case there is only one parameter "$scope"
+            - the last element in the array, is the controller function itself
+            - the purpose of defining the parameter name in this array is to ensure that
+            the controller code is minified, that angular can understand the parameters name
+            - write the actual code of the controller.
+
+    - $scope:
+        - is a built in angular object, that provides communication mechanism
+        between the View and the Controller
+        - by defining $scope to a controller function, angular inject $scope object into the controller,
+        then the controller augment the scope adding the "model" for the view binding and define methods for any view actions
+        - then the directives and expressions in the view can bind to the model properties or call the controller methods
+        - there is alternatives to using the $scope is using "AS", to bind the model and methods to controller directly.
+        - no need to pass $scope to the controller, and the model and methods are defined on the controller directly
+        - in the view, the model and methods are referenced using an alias defined in the ng-controller
+        - $scope still exists but behind the scenes
+
+    - controller best practices:
+        - define each controller as a separate .js file
+        - name the controller in Pascal case
+        - suffix the controller name with "Controller" or "Ctrl"
+        - wrap the controller in an IIFE
