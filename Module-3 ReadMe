@@ -1,0 +1,13 @@
+- Module 3 objectives:
+    a - understand how data is retrieved
+    b - evaluate existing angular services for calling web service
+    c - build a reusable data access component
+    d - modify the controller to retrieve data
+    e - fake it without the web service
+
+a - understand how data is retrieved.
+    - angular do not have direct access to corp resources
+    - so it need needed data from web services
+    - any web service that return json can work with angular app
+
+    
