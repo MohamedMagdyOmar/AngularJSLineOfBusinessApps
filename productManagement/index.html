@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <title>Acme Product Management</title>
 
+    <!-- Style sheets -->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/app.css" rel="stylesheet" />
+
     <!--Libraries Scripts-->
     <script src="js/angular.js"></script>
 
@@ -23,17 +27,22 @@
 
 <!-- this guarantee that angular use "productManagement" as Main Module -->
 <body ng-app = "productManagement">
+<div class="panel panel-primary">
+    <div class="panel-heading" style="font-size: large">Product List</div>
 <!--ng-init directive used to define the "Model" directly in the html that allows you to run the application
  with some test data before connecting to actual data in the back end,
  any directive or binding expression within the table will able to access list of products-->
 
 <!--the alias name is vm but it can be any name -->
-    <table ng-controller="ProductListCtrl as vm">
+    <div class="panel-body">
+    <table class="table" ng-controller="ProductListCtrl as vm">
         <thead>
             <tr>
                 <td>
                     <!--ng-click is another angular directive, that is executed when the button is clicked -->
-                    <button type="button" ng-click="vm.toggleImage()">
+                    <button type="button"
+                            class="btn btn-primary"
+                            ng-click="vm.toggleImage()">
                         {{vm.showImage? "Hide": "Show"}}
                         Image</button></td>
                 <td>Product</td>
@@ -64,8 +73,8 @@
             </tr>
         </tbody>
     </table>
-
-
+    </div>
+</div>
 </body>
 
 

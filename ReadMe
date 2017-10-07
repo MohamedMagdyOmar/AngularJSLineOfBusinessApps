@@ -133,3 +133,14 @@ g- Implement the methods for the action on the page.
      hide button to hide the images.
     - that is because "ng-show" and "ng-hide" directives only affect the display, not the fetching process
     so use ng-if instead
+
+
+h- Style the view with bootstrap:
+    - framework for prettifying web pages
+    - helps you build responsive web applications
+    - handles browser differences
+    - one of the key features in bootstrap is grid system, instead of using tables or divs to layout
+    the user interface elements, you can use bootstrap grid system
+    - the grid  system is divided into 12 equal columns, and you can place any elements in one of these columns
+    - in addition to grid system, it provides styling for many other things, such as tables, forms, buttons, components,...
+    -
