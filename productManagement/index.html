@@ -3,8 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Acme Product Management</title>
+
+    <!--Libraries Scripts-->
     <script src="js/angular.js"></script>
+
+    <!--Application Scripts-->
     <script src="app/app.js"></script>
+
+    <!--Product Controllers-->
+    <script src="app/products/productListCtrl.js"></script>
 </head>
 
 <!--define the application as angular app by using ng-app directive-->
@@ -19,33 +26,16 @@
 <!--ng-init directive used to define the "Model" directly in the html that allows you to run the application
  with some test data before connecting to actual data in the back end,
  any directive or binding expression within the table will able to access list of products-->
-    <table ng-init='products =  [
-            {"productId": 1,
-             "productName": "Leaf Rake",
-             "productCode": "GDN-0011",
-             "releaseDate": "March 19, 2009",
-             "description": "Leaf rake with 48-inch handle.",
-             "cost": 9.00,
-             "price": 19.95,
-             "category": "garden",
-             "tags": [ "leaf", "tool" ],
-             "imageUrl": "http://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png"
-            },
-            {
-            "productId": 5,
-            "productName": "Hammer",
-            "productCode": "TBX-0048",
-            "releaseDate": "May 21, 2013",
-            "description": "Curved claw steel hammer",
-            "cost": 1.00,
-            "price": 8.99,
-            "category": "toolbox",
-            "tags": ["tool"],
-            "imageUrl": "http://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png"
-            }]'>
+
+<!--the alias name is vm but it can be any name -->
+    <table ng-controller="ProductListCtrl as vm">
         <thead>
             <tr>
-                <td>Image</td>
+                <td>
+                    <!--ng-click is another angular directive, that is executed when the button is clicked -->
+                    <button type="button" ng-click="vm.toggleImage()">
+                        {{vm.showImage? "Hide": "Show"}}
+                        Image</button></td>
                 <td>Product</td>
                 <td>Code</td>
                 <td>Available</td>
@@ -54,10 +44,11 @@
         </thead>
         <tbody>
         <!--we are building "tr" element and we are going to repeat that element for each product-->
-            <tr ng-repeat="product in products">
+            <tr ng-repeat="product in vm.products">
                 <!--we changed it from "src" to "ng-src", that way the browser want to find the image until after
                 angular evaluate the binding expression-->
-                <td><img ng-src="{{product.imageUrl}}"
+                <td><img ng-if="vm.showImage"
+                         ng-src="{{product.imageUrl}}"
                          style = "width:50px; margin:2px"
                          title="{{product.productName}}"></td>
                 <!--{{}} is angular binding expression that allows you to insert dynamic values into html-->

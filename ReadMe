@@ -124,3 +124,12 @@ e- Build the Controller.
         - name the controller in Pascal case
         - suffix the controller name with "Controller" or "Ctrl"
         - wrap the controller in an IIFE
+
+
+f- Define the Model.
+
+g- Implement the methods for the action on the page.
+    -you will find that the images are shown in the developer tool, even if you click the
+     hide button to hide the images.
+    - that is because "ng-show" and "ng-hide" directives only affect the display, not the fetching process
+    so use ng-if instead
