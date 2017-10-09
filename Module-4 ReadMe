@@ -1,0 +1,47 @@
+Module-4:
+    - "Routing" is a technique for navigating between views.
+    - each route represents a specific view.
+    - activating a route navigates to that view
+    - one way to define a route is using Url
+    - the portion of the Url prefix with "#" symbol define fragment identifier
+    - angular routing takes the advantage of the fact that the fragment identifier is processed by the client,
+    so you can assign a unique fragment identifier to each view, and navigate to that fragment to display this view.
+    - the fragment identifier is uniquely identifying a routing state not a physical resource.
+    - for example:
+        - say you have a "Menu", and from that menu you need to navigate to the "welcome page",
+        or to the "product list" view.
+        - you can identify a default route to the "welcome page" using just slash "/"
+            route:/
+            ex: http://www.mysite.com/.../#/
+
+        - you can identify the route to the "product list" view using "/products"
+            route:/products
+            ex: http://www.mysite.com/.../#/products
+
+    - angular provides 2 different routing frameworks:
+        1- ngRoute
+        2- UIRouter
+
+    -ngRoute:
+        - based on URL fragment identifiers
+        - each route has:
+            - "Url" fragment identifier.
+            - view template [that is displayed when navigating to this Url]
+            - optional controller
+
+    - UI Router:
+        - based on application states
+        - each state has:
+            - optional Url fragment identifier
+            - view template
+            - optional controller
+            - additional attached behavior
+
+    Module adjectives:
+        1- define a site map
+        2- layout the layout template
+        3- configure the routing
+        4- build a menu with routing
+        5- build a default view
+        6- use to resolve to preload data
+        7- define a nested routing states for a wizard

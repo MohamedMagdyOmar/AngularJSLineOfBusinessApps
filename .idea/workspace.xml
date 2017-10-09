@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="641c1b05-901e-4ea1-8ee1-5e923302c638" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Module-3 ReadMe" afterPath="$PROJECT_DIR$/Module-3 ReadMe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/productManagement/common/services/productResourceMock.js" afterPath="$PROJECT_DIR$/productManagement/common/services/productResourceMock.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Module-4 ReadMe" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,87 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="ReadMe" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ReadMe">
+      <file leaf-file-name="Module-4 ReadMe" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Module-4 ReadMe">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="88" column="29" lean-forward="false" selection-start-line="88" selection-start-column="29" selection-end-line="88" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Module-3 ReadMe" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Module-3 ReadMe">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="22" column="56" lean-forward="true" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="productListCtrl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/productManagement/app/products/productListCtrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" column="44" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="44" />
-              <folding>
-                <element signature="e#669#1709#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/productManagement/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="11" column="41" lean-forward="true" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="common.services.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/productManagement/common/services/common.services.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" column="5" lean-forward="false" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="productResourceMock.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/productManagement/common/services/productResourceMock.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="142" column="102" lean-forward="false" selection-start-line="142" selection-start-column="102" selection-end-line="142" selection-end-column="102" />
-              <folding>
-                <element signature="e#387#2979#0" expanded="false" />
-                <element signature="e#4178#4759#0" expanded="false" />
-                <element signature="e#4922#5750#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="productResource.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/productManagement/common/services/productResource.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="5" column="62" lean-forward="false" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/productManagement/app/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="651">
-              <caret line="50" column="84" lean-forward="true" selection-start-line="50" selection-start-column="84" selection-end-line="50" selection-end-column="84" />
+            <state relative-caret-position="756">
+              <caret line="36" column="33" lean-forward="true" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -142,6 +66,7 @@
         <option value="$PROJECT_DIR$/productManagement/app/app.js" />
         <option value="$PROJECT_DIR$/productManagement/common/services/productResourceMock.js" />
         <option value="$PROJECT_DIR$/Module-3 ReadMe" />
+        <option value="$PROJECT_DIR$/Module-4 ReadMe" />
       </list>
     </option>
   </component>
@@ -182,38 +107,6 @@
               <item name="AngularJSLineOfBusinessApps" type="b2602c69:ProjectViewProjectNode" />
               <item name="AngularJSLineOfBusinessApps" type="462c0819:PsiDirectoryNode" />
               <item name="productManagement" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AngularJSLineOfBusinessApps" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AngularJSLineOfBusinessApps" type="462c0819:PsiDirectoryNode" />
-              <item name="productManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AngularJSLineOfBusinessApps" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AngularJSLineOfBusinessApps" type="462c0819:PsiDirectoryNode" />
-              <item name="productManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="products" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AngularJSLineOfBusinessApps" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AngularJSLineOfBusinessApps" type="462c0819:PsiDirectoryNode" />
-              <item name="productManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AngularJSLineOfBusinessApps" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AngularJSLineOfBusinessApps" type="462c0819:PsiDirectoryNode" />
-              <item name="productManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AngularJSLineOfBusinessApps" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AngularJSLineOfBusinessApps" type="462c0819:PsiDirectoryNode" />
-              <item name="productManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -256,12 +149,12 @@
       <workItem from="1507376956274" duration="12051000" />
       <workItem from="1507402788339" duration="1019000" />
       <workItem from="1507526712673" duration="42000" />
-      <workItem from="1507526767265" duration="9224000" />
+      <workItem from="1507526767265" duration="11401000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28895000" />
+    <option name="totallyTimeSpent" value="31072000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="960" y="0" width="960" height="1032" extended-state="0" />
@@ -400,14 +293,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ReadMe">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="88" column="29" lean-forward="false" selection-start-line="88" selection-start-column="29" selection-end-line="88" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/productManagement/common/services/productResouce.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -480,8 +365,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Module-3 ReadMe">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="22" column="56" lean-forward="true" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
+        <state relative-caret-position="399">
+          <caret line="19" column="35" lean-forward="false" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ReadMe">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="88" column="29" lean-forward="false" selection-start-line="88" selection-start-column="29" selection-end-line="88" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Module-4 ReadMe">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="36" column="33" lean-forward="true" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
           <folding />
         </state>
       </provider>
