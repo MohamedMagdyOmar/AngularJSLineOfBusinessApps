@@ -17,7 +17,7 @@ c - build a reusable data access component:
     - in angular the recommended way to build reusable component is to create a second "module",
     and in that module create custom services containing the reusable code.
 
-    - we will define the reusable data access compenent by building firstly a seperate module
+    - we will define the reusable data access component by building firstly a separate module
     that we will call "Common.Services"
     - the code to create this module:
         angular.module("common.services",["ngResource"])
@@ -42,17 +42,17 @@ c - build a reusable data access component:
         productResource.query(function(data){
         vm.products = data;
         })
-        - "CallBack" function is called upon recieving successful HTTP response
+        - "CallBack" function is called upon receiving successful HTTP response
         - the response is a json data returned from the query
     - now lets remove hard coded "products" in our controller.
     - but now we do not have web service implemented, so we need to have fake web service
 
 e - fake it without the web service: $httpBackend
-    - angular provides $httpBackend services to intercept calls to web service and fake the reposn
+    - angular provides $httpBackend services to intercept calls to web service and fake the response
     - angular's fake HTTP backend implementation, and is suitable for any app using either "$http" or "resource"
     - it mocks the calls to the web service
     - it returns static data to the application
-    - there are 2 implmenetations:
+    - there are 2 implementations:
         - ngMock: for unit testing applications
         - ngMockE2E: for end-to-end testing or backend-less development
 
@@ -61,12 +61,22 @@ e - fake it without the web service: $httpBackend
         - Create a new module that depends on ngMockE2E
         - Set up static data
         - define the fake responses to the web server calls
-        - add the new module as a depenedency in the main module
-        - to turn off the mocking simply remove the depenedency from the main module
+        - add the new module as a dependency in the main module
+        - to turn off the mocking simply remove the dependency from the main module
 
     - so what is happened:
         - lets start with the controller, the controller is calling "query" method of the "productResource" service
         - that service send a RESTFUL "GET" request to a web service using the URL that we defined there
         - the "httpBackend" service is intercepting that request, so when it receives this Url, it responding with this data
+
+    Part 2:
+    - some parts of the application such as "product details view" and "product edit view" retrieve only one product
+    - now our application returns all products because the url is as follows /api/products, so we need to add another get
+    - so we can use:
+        $httpBackend.whenGet(productUrl + "/1").respond(products);
+        $httpBackend.whenGet(productUrl + "/2").respond(products);
+
+        but this is not clean and not extensible
+    - but "whenGet" takes regular expression [go and check productResourceMock]
 
     

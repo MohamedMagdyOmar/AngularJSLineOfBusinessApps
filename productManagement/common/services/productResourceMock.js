@@ -77,6 +77,71 @@
         // because we put this code in another module, so in order to use it in the rest of our app
         // we need to define it as dependency in the main module
         $httpBackend.whenGET(productUrl).respond(products);
+
+        // some parts of the application such as "product details view" and "product edit view" retrieve only one product
+        // now our application returns all products because the url is as follows /api/products, so we need to add another get
+        // so we can use:
+        //$httpBackend.whenGET(productUrl + "/1").respond(products);
+        //$httpBackend.whenGET(productUrl + "/2").respond(products);
+
+        // but this is not clean and not extensible
+        var editingRegex = new RegExp(productUrl + "/[0-9][0-9]*",'')
+
+        //$httpBackend.whenGET(editingRegex).respond(products)
+        // but we do not need to respond with the whole products, we need to respond with only 1 product
+
+        $httpBackend.whenGET(editingRegex).respond(function(method, url, data){
+            var product = {"productId":0};
+            var parameters = url.split('/'); // it will be splitted in an array
+            var length = parameters.length;
+            var id = parameters[length - 1];
+
+            if(id > 0)
+            {
+                for (var i = 0; i < products.length; i++)
+                {
+                    if(products[i].productId == id)
+                    {
+                        product = products[i];
+                        break;
+                    }
+                };
+            }
+            return [200, product,{}]
+        })
+
+        // so when we are implementing "save" it will update the variable products
+        $httpBackend.whenPOST(productUrl).respond(function(method, url, data){
+            // to de-serialize passed json string
+            var product = angular.fromJson(data);
+
+            if(!product.productId)
+            {
+                // new product Id
+                // assign productId for the new product
+                // update list of products
+                product.productId = products[product.length - 1].productId + 1;
+                products.push(product);
+            }
+            else
+            {
+                // updated product
+                for(var i = 0; i < products.length; i++)
+                {
+                    if(products[i].productId = product.productId)
+                    {
+                        products[i] = product;
+                        break;
+                    }
+                }
+            }
+
+            return [200, product, {}]
+        })
+
+        // Pass through any requests for application files
+        // every requests to an html file or any file in the app folder will be ignored by the mocking
+        $httpBackend.whenGET(/app/).passThrough();
     });
 
 }())
