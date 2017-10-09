@@ -14,7 +14,7 @@ a - understand how data is retrieved.
 c - build a reusable data access component:
     - we need to put the code that retrieve the data in reusable component, because several diff parts
     of the application will need to access data
-    - in angualr the recommened way to build reusable component is to create a second "module",
+    - in angualr the recommended way to build reusable component is to create a second "module",
     and in that module create custom services containing the reusable code.
 
     - we will define the reusable data access compenent by building firstly a seperate module
@@ -27,7 +27,25 @@ c - build a reusable data access component:
     - the code looks like:
         angular.module("common.services").factory("productResource",["$resource, productResource"])
 
+ d - modify the controller to retrieve data.
+    - by default the "resource" object provides 5 methods:
+        - "Get" -> send get request, and expects json object in the response
+        - "Query" -> send get request, but expects json array in the response
+        - "Save" -> send post request
+        - "Delete" -> send delete request
+        - "Remove" -> is anonymous with "Delete", it is often used in place of "Delete" because "Delete"
+        is reserved word in JS
+        - note that there is no "PUT" request, "Save" send "Post" request so you can use the "Post"
+        or you can extend "$resource" to have "Put" request
 
+    - now our application needs list of products
+        productResource.query(function(data){
+        vm.products = data;
+        })
+        - "CallBack" function is called upon recieving successful HTTP response
+        - the response is a json data returned from the query
+    - now lets remove hard coded "products" in our controller.
+    - but now we do not have web service implemented, so we need to have fake web service
 
 
 
