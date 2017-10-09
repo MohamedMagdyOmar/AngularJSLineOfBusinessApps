@@ -64,3 +64,18 @@ Module-4:
     - all other application views appears within this main page
     - we define the html for header and menu for one time, and display the page in the area below it.
     - the route will specify the controller associated with each view
+
+3- setting up the routing.
+    - setting up the Routing using UI-Router:
+        1- set UI Router:
+            a- download UI router library.
+            b- insert script tag for angular-ui-router.js in index html file.
+            c- set the ui.router as a dependency in the main module.
+        2- set the layout view:
+            - identify where the views appear appear in the index html file.
+            - add the "ui-view" directive in the appropriate location in the "ui-view" or use "data-ui-view" if your IDE
+              did not recognize "ui-view".
+        3- configure the "Routes"
+            - identify the route states
+            - define the routes in the code.
+

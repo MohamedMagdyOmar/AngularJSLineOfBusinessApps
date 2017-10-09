@@ -13,6 +13,7 @@
     <!--make sure that you added the "angular-resource" after the angular.js-->
     <script src="js/angular-resource.js"></script>
     <script src="js/angular-mocks.js"></script>
+    <script src="js/angular-ui-router.js"></script>
 
     <!--Application Scripts-->
     <script src="app/app.js"></script>
@@ -34,7 +35,11 @@
 
 <!-- this guarantee that angular use "productManagement" as Main Module -->
 <body ng-app = "productManagement">
-
+<!-- we just add container to improve the look -->
+    <div class="container">
+        <!-- ui.router will inject all of the view template -->
+        <div ui-view></div>
+    </div>
 </body>
 
 
