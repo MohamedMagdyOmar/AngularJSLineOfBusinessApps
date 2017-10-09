@@ -44,7 +44,7 @@
     // so to make the parser to expect "function expression" is to wrap it in another "parantheses" as in step 3
 
     "use strict";
-    var app = angular.module("productManagement", ["common.services"]);
+    var app = angular.module("productManagement", ["common.services","productResourceMock"]);
 
     //using strict inside IIFE, puts the entire content of the IIFE in strict mode
     // in script mode Java script will catch common coding mistakes and throw exceptions

@@ -14,7 +14,7 @@ a - understand how data is retrieved.
 c - build a reusable data access component:
     - we need to put the code that retrieve the data in reusable component, because several diff parts
     of the application will need to access data
-    - in angualr the recommended way to build reusable component is to create a second "module",
+    - in angular the recommended way to build reusable component is to create a second "module",
     and in that module create custom services containing the reusable code.
 
     - we will define the reusable data access compenent by building firstly a seperate module
@@ -47,6 +47,26 @@ c - build a reusable data access component:
     - now lets remove hard coded "products" in our controller.
     - but now we do not have web service implemented, so we need to have fake web service
 
+e - fake it without the web service: $httpBackend
+    - angular provides $httpBackend services to intercept calls to web service and fake the reposn
+    - angular's fake HTTP backend implementation, and is suitable for any app using either "$http" or "resource"
+    - it mocks the calls to the web service
+    - it returns static data to the application
+    - there are 2 implmenetations:
+        - ngMock: for unit testing applications
+        - ngMockE2E: for end-to-end testing or backend-less development
 
+    - steps to mocking the web server:
+        - download the ngMockE2E module
+        - Create a new module that depends on ngMockE2E
+        - Set up static data
+        - define the fake responses to the web server calls
+        - add the new module as a depenedency in the main module
+        - to turn off the mocking simply remove the depenedency from the main module
+
+    - so what is happened:
+        - lets start with the controller, the controller is calling "query" method of the "productResource" service
+        - that service send a RESTFUL "GET" request to a web service using the URL that we defined there
+        - the "httpBackend" service is intercepting that request, so when it receives this Url, it responding with this data
 
     
