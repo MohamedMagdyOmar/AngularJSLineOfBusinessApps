@@ -1,10 +1,12 @@
 (function(){
     "use strict";
     angular.module("productManagement")
-        .controller("ProductListCtrl", ProductListCtrl);
+        .controller("ProductListCtrl",
+                    ["productResource",
+                        ProductListCtrl]);
 
 
-    function ProductListCtrl(){
+    function ProductListCtrl(productResource){
         // we need to define the model for binding with the view
         // and define the methods for any actions in the view
         // when using the controller "As" syntax, the model is defined on "this" variable
@@ -13,7 +15,7 @@
         var vm = this;
         //we need to augment this variable with the model and any methods needed by the view, so lets start with the model
 
-        vm.products = [
+        /*vm.products = [
                 {"productId": 1,
                     "productName": "Leaf Rake",
                     "productCode": "GDN-0011",
@@ -37,7 +39,14 @@
                 "tags": ["tool"],
                 "imageUrl": "http://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png"
 
-            }]
+            }]*/
+        // after commenting hard coded
+        // we need to ask angular to pass a reference to productResource service to this
+        // specific controller function we do this by adding productResource to function parameter
+
+        productResource.query(function(data){
+            vm.products = data;
+        })
 
         vm.showImage = false;
         vm.toggleImage = function()
