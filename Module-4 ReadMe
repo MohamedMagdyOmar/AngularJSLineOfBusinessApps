@@ -56,4 +56,11 @@ Module-4:
         - menu -> welcome page (state: home)
         - menu -> product list (state: productList)
         - menu -> product edit (state: productEdit)
-    -
+
+2- layout the layout template:
+    - the "Layout Template" is the main page of the application
+    - if you are familiar with the concept of "SPA [single page application]", so the layout
+    is the "single page".
+    - all other application views appears within this main page
+    - we define the html for header and menu for one time, and display the page in the area below it.
+    - the route will specify the controller associated with each view
