@@ -45,3 +45,15 @@ Module-4:
         5- build a default view
         6- use to resolve to preload data
         7- define a nested routing states for a wizard
+
+1- define a site map:
+    - a site map is the list of pages or views of the web app.
+    - it is organized in a hierarchy, and shows the navigation path between the views.
+    - eg:
+        - welcome page
+        - product list -> product details (state: productDetail)
+        - product list -> product edit (state: productEdit)
+        - menu -> welcome page (state: home)
+        - menu -> product list (state: productList)
+        - menu -> product edit (state: productEdit)
+    -
