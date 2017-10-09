@@ -10,4 +10,25 @@ a - understand how data is retrieved.
     - so it need needed data from web services
     - any web service that return json can work with angular app
 
+
+c - build a reusable data access component:
+    - we need to put the code that retrieve the data in reusable component, because several diff parts
+    of the application will need to access data
+    - in angualr the recommened way to build reusable component is to create a second "module",
+    and in that module create custom services containing the reusable code.
+
+    - we will define the reusable data access compenent by building firstly a seperate module
+    that we will call "Common.Services"
+    - the code to create this module:
+        angular.module("common.services",["ngResource"])
+        we use $resource to interact with web server
+    - once the "module" is built we are ready to build the custom service.
+    - we need to register this service with the common services module.
+    - the code looks like:
+        angular.module("common.services").factory("productResource",["$resource, productResource"])
+
+
+
+
+
     
