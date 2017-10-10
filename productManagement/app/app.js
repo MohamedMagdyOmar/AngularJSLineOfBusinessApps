@@ -83,7 +83,15 @@
                         .state("productDetail",{
                             url: "/products/:productId",
                             templateUrl: "app/products/productDetailView.html",
-                            controller: "ProductDetailCtrl as vm"
-                        })
+                            controller: "ProductDetailCtrl as vm",
+                            resolve: {
+                                productResource: "productResource", //it define dependency on "productResource" (string name of the service) service that you have created
+                                product: function(productResource, $stateParams) // it define a dependecy on the result of the defined function
+                                            {
+                                                var productId = $stateParams.productId;
+                                                return productResource.get({productId: productId}).$promise;
+                                            }
+                                     }
+                                                })
                 }]);
 }());
