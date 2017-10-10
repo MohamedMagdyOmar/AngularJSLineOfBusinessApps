@@ -35,12 +35,21 @@
                 <!--{{}} it is like javascript code snippet that can performs calculation, append strings,
                 or reference model properties as in below line of code-->
                 <!--{{}} it tells angular to replace text expression with the value of the defined expression-->
-                <td>{{product.productName}}</td>
+                <td>
+                    <a ui-sref="productDetail({productId: product.productId})">
+                    {{product.productName}}</a>
+                </td>
                 <td>{{product.productCode}}</td>
                 <td>{{product.releaseDate}}</td>
                 <!--angular provides set of filters that format or filter the value of a expression -->
                 <!--here we are using currency filter, filter name is currency -->
                 <td>{{product.price | currency}}</td>
+                <td>
+                    <a class="btn btn-primary"
+                       ui-sref="productEdit({productId: product.productId})">
+                        Edit
+                    </a>
+                </td>
             </tr>
             </tbody>
         </table>

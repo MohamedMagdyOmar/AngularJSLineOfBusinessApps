@@ -1,0 +1,8 @@
+1-adding another route state:
+    -to create a new state [module 4] we moved in 4 steps:
+        1- build the view template
+        2- optionally create the controller
+        3- configure the state
+        4- activate the state
+
+    -
