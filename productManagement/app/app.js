@@ -44,7 +44,10 @@
     // so to make the parser to expect "function expression" is to wrap it in another "parantheses" as in step 3
 
     "use strict";
-    var app = angular.module("productManagement", ["common.services", "ui.router", "productResourceMock"]);
+    var app = angular.module("productManagement",
+        ["common.services",
+            "ui.router",
+            "productResourceMock"]);
 
     //using strict inside IIFE, puts the entire content of the IIFE in strict mode
     // in script mode Java script will catch common coding mistakes and throw exceptions
@@ -52,4 +55,20 @@
     // app = angular.module("productManagement", []);
 
     // by adding "common.services" it is now accessible to any place in our application
+
+    // 4.5
+    // we will call the config method, the config method takes 1 parameter, is the function that defines
+    // the configuration code, we want to pass "$stateProvider" service into that function, and since we want to make the code
+    // safe for minification we will pass an array into this config method.
+    // angular will inject "$stateProvider" into this function for us
+    app.config(["$stateProvider", "$urlRouterProvider",
+                function($stateProvider, $urlRouterProvider){
+                    $urlRouterProvider.otherwise("/products");
+
+                    $stateProvider.state("productList",{
+                    url: "/products",
+                    templateUrl: "app/products/productListView.html",
+                    controller: "ProductListCtrl as vm"
+                })
+                }]);
 }());

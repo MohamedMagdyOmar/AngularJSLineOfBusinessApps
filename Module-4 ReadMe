@@ -79,3 +79,50 @@ Module-4:
             - identify the route states
             - define the routes in the code.
 
+3- configure the routing:
+    - "state" corresponds to a specific place in the application
+    - each "state" define a "view", "controller" associated with the view, and other "state" properties.
+    - when one "state" activated the associated view is displayed within the tag marked with "ui-view" directive,
+    and the asscoiated controller is executed.
+    - the routes are configured in the application using the "UIRouters $stateProvider service".
+    - "$stateProvider" service provides a "state" method for defining the "state".
+
+    $stateProvider.state("productList",{
+            url:"/products",
+            templateUrl:"app/products/productListView.html",
+            controller: "ProductListCtrl as vm"
+            })
+
+    - each "state" includes a "name", and an "object".
+    - use the "object" properties to define the parameters of the "state".
+        - "url" property define url fragment identifier associated with the state, by associated url with
+        a state you get deep linking, deep linking reflect where the user is in the application, and this makes browser
+        forward and backward button behaves as expected
+        - "templateUrl" property defines the path to the html template containing html elements for the view,
+        this template is then displayed in the html element that caontain "ui-view" directives.
+        - "controller" property is optional, it defines the string name of the controller associated with the defined view,
+        since the controller is register with the module, the $stateProvider can locate the controller by its name.
+
+    - we will add the "route state" configuration for the entire application in the app.js file, please check it out.
+
+    default state:
+    - when we run the application we had no page displayed that is because our routing does not define a default route state.
+    - we can define a default route state using "$urlRouterProvider" service.
+    - the "urlRouterProvider" service watches $location for changes to the Url, so when "$location" changes, it finds a matching "state".
+    - then activates that state.
+
+    app.config(["$stateProvider","urlRouterProvider", function($stateProvider, $urlRouterProvider)
+    {
+        $urlRouterProvider.otherwise("/products");
+    }])
+
+    activating a route:
+    - there are 3 basic ways to activate a route and navigate to a view:
+        1- Set the URL -> .../productManagement/index.html#/products. [using fragement identifier]
+        2- activate a state with code by calling $state.go() eg. $state.go('productList'); [using "state" name]
+        3- click a link with the "ui-sref" directive eg.: [using "state" name]
+            <a ui-sref = "productList"> productList </a>
+
+
+
+
