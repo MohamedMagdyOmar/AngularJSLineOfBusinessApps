@@ -83,7 +83,7 @@ Module-4:
     - "state" corresponds to a specific place in the application
     - each "state" define a "view", "controller" associated with the view, and other "state" properties.
     - when one "state" activated the associated view is displayed within the tag marked with "ui-view" directive,
-    and the asscoiated controller is executed.
+    and the associated controller is executed.
     - the routes are configured in the application using the "UIRouters $stateProvider service".
     - "$stateProvider" service provides a "state" method for defining the "state".
 
@@ -99,7 +99,7 @@ Module-4:
         a state you get deep linking, deep linking reflect where the user is in the application, and this makes browser
         forward and backward button behaves as expected
         - "templateUrl" property defines the path to the html template containing html elements for the view,
-        this template is then displayed in the html element that caontain "ui-view" directives.
+        this template is then displayed in the html element that contain "ui-view" directives.
         - "controller" property is optional, it defines the string name of the controller associated with the defined view,
         since the controller is register with the module, the $stateProvider can locate the controller by its name.
 
@@ -118,11 +118,10 @@ Module-4:
 
     activating a route:
     - there are 3 basic ways to activate a route and navigate to a view:
-        1- Set the URL -> .../productManagement/index.html#/products. [using fragement identifier]
+        1- Set the URL -> .../productManagement/index.html#/products. [using fragment identifier]
         2- activate a state with code by calling $state.go() eg. $state.go('productList'); [using "state" name]
         3- click a link with the "ui-sref" directive eg.: [using "state" name]
             <a ui-sref = "productList"> productList </a>
 
 
-
-
+4- build a menu with routing

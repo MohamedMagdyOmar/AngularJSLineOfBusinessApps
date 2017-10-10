@@ -9,11 +9,14 @@
     <link href="css/app.css" rel="stylesheet" />
 
     <!--Libraries Scripts-->
+    <!--jquery should be before angular-->
+    <script src="js/jquery.js"></script>
     <script src="js/angular.js"></script>
     <!--make sure that you added the "angular-resource" after the angular.js-->
     <script src="js/angular-resource.js"></script>
     <script src="js/angular-mocks.js"></script>
     <script src="js/angular-ui-router.js"></script>
+    <script src="js/bootstrap.js"></script>
 
     <!--Application Scripts-->
     <script src="app/app.js"></script>
@@ -35,6 +38,35 @@
 
 <!-- this guarantee that angular use "productManagement" as Main Module -->
 <body ng-app = "productManagement">
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <a class="navbar-brand" ui-sref="home">Acme Product Management</a>
+
+            <div class="navbar-header">
+                <!--for use when the menu is displayed in a small page(mobile)-->
+                <button type="button"
+                        class="navbar-toggle"
+                        data-toggle="collapse"
+                        data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a ui-sref="productList">Product List</a></li>
+                    <!--below productId comes from app.js when you defined the "state-->
+                    <li><a ui-sref="productEdit({productId:0})"><i class="glyphicon glyphicon-plus"></i>Add Product</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </nav>
+
 <!-- we just add container to improve the look -->
     <div class="container">
         <!-- ui.router will inject all of the view template -->
