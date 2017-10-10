@@ -1,0 +1,48 @@
+<div class="panel panel-primary">
+    <div class="panel-heading" style="font-size: large">Product List</div>
+    <!--ng-init directive used to define the "Model" directly in the html that allows you to run the application
+     with some test data before connecting to actual data in the back end,
+     any directive or binding expression within the table will able to access list of products-->
+
+    <!--the alias name is vm but it can be any name -->
+    <div class="panel-body">
+        <table class="table">
+            <thead>
+            <tr>
+                <td>
+                    <!--ng-click is another angular directive, that is executed when the button is clicked -->
+                    <button type="button"
+                            class="btn btn-primary"
+                            ng-click="vm.toggleImage() ">
+                        {{vm.showImage? "Hide": "Show"}}
+                        Image</button></td>
+                <td>Product</td>
+                <td>Code</td>
+                <td>Available</td>
+                <td>Price</td>
+            </tr>
+            </thead>
+            <tbody>
+            <!--we are building "tr" element and we are going to repeat that element for each product-->
+            <tr ng-repeat="product in vm.products">
+                <!--we changed it from "src" to "ng-src", that way the browser want to find the image until after
+                angular evaluate the binding expression-->
+                <td><img ng-if="vm.showImage"
+                         ng-src="{{product.imageUrl}}"
+                         style = "width:50px; margin:2px"
+                         title="{{product.productName}}"></td>
+                <!--{{}} is angular binding expression that allows you to insert dynamic values into html-->
+                <!--{{}} it is like javascript code snippet that can performs calculation, append strings,
+                or reference model properties as in below line of code-->
+                <!--{{}} it tells angular to replace text expression with the value of the defined expression-->
+                <td>{{product.productName}}</td>
+                <td>{{product.productCode}}</td>
+                <td>{{product.releaseDate}}</td>
+                <!--angular provides set of filters that format or filter the value of a expression -->
+                <!--here we are using currency filter, filter name is currency -->
+                <td>{{product.price | currency}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

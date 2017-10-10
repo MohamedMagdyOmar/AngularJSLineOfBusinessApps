@@ -1,0 +1,127 @@
+Module-4:
+    - "Routing" is a technique for navigating between views.
+    - each route represents a specific view.
+    - activating a route navigates to that view
+    - one way to define a route is using Url
+    - the portion of the Url prefix with "#" symbol define fragment identifier
+    - angular routing takes the advantage of the fact that the fragment identifier is processed by the client,
+    so you can assign a unique fragment identifier to each view, and navigate to that fragment to display this view.
+    - the fragment identifier is uniquely identifying a routing state not a physical resource.
+    - for example:
+        - say you have a "Menu", and from that menu you need to navigate to the "welcome page",
+        or to the "product list" view.
+        - you can identify a default route to the "welcome page" using just slash "/"
+            route:/
+            ex: http://www.mysite.com/.../#/
+
+        - you can identify the route to the "product list" view using "/products"
+            route:/products
+            ex: http://www.mysite.com/.../#/products
+
+    - angular provides 2 different routing frameworks:
+        1- ngRoute
+        2- UIRouter
+
+    -ngRoute:
+        - based on URL fragment identifiers
+        - each route has:
+            - "Url" fragment identifier.
+            - view template [that is displayed when navigating to this Url]
+            - optional controller
+
+    - UI Router:
+        - based on application states
+        - each state has:
+            - optional Url fragment identifier
+            - view template
+            - optional controller
+            - additional attached behavior
+
+    Module adjectives:
+        1- define a site map
+        2- layout the layout template
+        3- configure the routing
+        4- build a menu with routing
+        5- build a default view
+        6- use to resolve to preload data
+        7- define a nested routing states for a wizard
+
+1- define a site map:
+    - a site map is the list of pages or views of the web app.
+    - it is organized in a hierarchy, and shows the navigation path between the views.
+    - eg:
+        - welcome page
+        - product list -> product details (state: productDetail)
+        - product list -> product edit (state: productEdit)
+        - menu -> welcome page (state: home)
+        - menu -> product list (state: productList)
+        - menu -> product edit (state: productEdit)
+
+2- layout the layout template:
+    - the "Layout Template" is the main page of the application
+    - if you are familiar with the concept of "SPA [single page application]", so the layout
+    is the "single page".
+    - all other application views appears within this main page
+    - we define the html for header and menu for one time, and display the page in the area below it.
+    - the route will specify the controller associated with each view
+
+3- setting up the routing.
+    - setting up the Routing using UI-Router:
+        1- set UI Router:
+            a- download UI router library.
+            b- insert script tag for angular-ui-router.js in index html file.
+            c- set the ui.router as a dependency in the main module.
+        2- set the layout view:
+            - identify where the views appear appear in the index html file.
+            - add the "ui-view" directive in the appropriate location in the "ui-view" or use "data-ui-view" if your IDE
+              did not recognize "ui-view".
+        3- configure the "Routes"
+            - identify the route states
+            - define the routes in the code.
+
+3- configure the routing:
+    - "state" corresponds to a specific place in the application
+    - each "state" define a "view", "controller" associated with the view, and other "state" properties.
+    - when one "state" activated the associated view is displayed within the tag marked with "ui-view" directive,
+    and the associated controller is executed.
+    - the routes are configured in the application using the "UIRouters $stateProvider service".
+    - "$stateProvider" service provides a "state" method for defining the "state".
+
+    $stateProvider.state("productList",{
+            url:"/products",
+            templateUrl:"app/products/productListView.html",
+            controller: "ProductListCtrl as vm"
+            })
+
+    - each "state" includes a "name", and an "object".
+    - use the "object" properties to define the parameters of the "state".
+        - "url" property define url fragment identifier associated with the state, by associated url with
+        a state you get deep linking, deep linking reflect where the user is in the application, and this makes browser
+        forward and backward button behaves as expected
+        - "templateUrl" property defines the path to the html template containing html elements for the view,
+        this template is then displayed in the html element that contain "ui-view" directives.
+        - "controller" property is optional, it defines the string name of the controller associated with the defined view,
+        since the controller is register with the module, the $stateProvider can locate the controller by its name.
+
+    - we will add the "route state" configuration for the entire application in the app.js file, please check it out.
+
+    default state:
+    - when we run the application we had no page displayed that is because our routing does not define a default route state.
+    - we can define a default route state using "$urlRouterProvider" service.
+    - the "urlRouterProvider" service watches $location for changes to the Url, so when "$location" changes, it finds a matching "state".
+    - then activates that state.
+
+    app.config(["$stateProvider","urlRouterProvider", function($stateProvider, $urlRouterProvider)
+    {
+        $urlRouterProvider.otherwise("/products");
+    }])
+
+    activating a route:
+    - there are 3 basic ways to activate a route and navigate to a view:
+        1- Set the URL -> .../productManagement/index.html#/products. [using fragment identifier]
+        2- activate a state with code by calling $state.go() eg. $state.go('productList'); [using "state" name]
+        3- click a link with the "ui-sref" directive eg.: [using "state" name]
+            <a ui-sref = "productList"> productList </a>
+
+
+4- build a menu with routing

@@ -9,10 +9,14 @@
     <link href="css/app.css" rel="stylesheet" />
 
     <!--Libraries Scripts-->
+    <!--jquery should be before angular-->
+    <script src="js/jquery.js"></script>
     <script src="js/angular.js"></script>
     <!--make sure that you added the "angular-resource" after the angular.js-->
     <script src="js/angular-resource.js"></script>
     <script src="js/angular-mocks.js"></script>
+    <script src="js/angular-ui-router.js"></script>
+    <script src="js/bootstrap.js"></script>
 
     <!--Application Scripts-->
     <script src="app/app.js"></script>
@@ -34,54 +38,40 @@
 
 <!-- this guarantee that angular use "productManagement" as Main Module -->
 <body ng-app = "productManagement">
-<div class="panel panel-primary">
-    <div class="panel-heading" style="font-size: large">Product List</div>
-<!--ng-init directive used to define the "Model" directly in the html that allows you to run the application
- with some test data before connecting to actual data in the back end,
- any directive or binding expression within the table will able to access list of products-->
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <a class="navbar-brand" ui-sref="home">Acme Product Management</a>
 
-<!--the alias name is vm but it can be any name -->
-    <div class="panel-body">
-    <table class="table" ng-controller="ProductListCtrl as vm">
-        <thead>
-            <tr>
-                <td>
-                    <!--ng-click is another angular directive, that is executed when the button is clicked -->
-                    <button type="button"
-                            class="btn btn-primary"
-                            ng-click="vm.toggleImage()">
-                        {{vm.showImage? "Hide": "Show"}}
-                        Image</button></td>
-                <td>Product</td>
-                <td>Code</td>
-                <td>Available</td>
-                <td>Price</td>
-            </tr>
-        </thead>
-        <tbody>
-        <!--we are building "tr" element and we are going to repeat that element for each product-->
-            <tr ng-repeat="product in vm.products">
-                <!--we changed it from "src" to "ng-src", that way the browser want to find the image until after
-                angular evaluate the binding expression-->
-                <td><img ng-if="vm.showImage"
-                         ng-src="{{product.imageUrl}}"
-                         style = "width:50px; margin:2px"
-                         title="{{product.productName}}"></td>
-                <!--{{}} is angular binding expression that allows you to insert dynamic values into html-->
-                <!--{{}} it is like javascript code snippet that can performs calculation, append strings,
-                or reference model properties as in below line of code-->
-                <!--{{}} it tells angular to replace text expression with the value of the defined expression-->
-                <td>{{product.productName}}</td>
-                <td>{{product.productCode}}</td>
-                <td>{{product.releaseDate}}</td>
-                <!--angular provides set of filters that format or filter the value of a expression -->
-                <!--here we are using currency filter, filter name is currency -->
-                <td>{{product.price | currency}}</td>
-            </tr>
-        </tbody>
-    </table>
+            <div class="navbar-header">
+                <!--for use when the menu is displayed in a small page(mobile)-->
+                <button type="button"
+                        class="navbar-toggle"
+                        data-toggle="collapse"
+                        data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a ui-sref="productList">Product List</a></li>
+                    <!--below productId comes from app.js when you defined the "state-->
+                    <li><a ui-sref="productEdit({productId:0})"><i class="glyphicon glyphicon-plus"></i>Add Product</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </nav>
+
+<!-- we just add container to improve the look -->
+    <div class="container">
+        <!-- ui.router will inject all of the view template -->
+        <div ui-view></div>
     </div>
-</div>
 </body>
 
 
