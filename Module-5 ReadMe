@@ -1,0 +1,107 @@
+1-adding another route state:
+    -to create a new state [module 4] we moved in 4 steps:
+        1- build the view template
+        2- optionally create the controller
+        3- configure the state
+        4- activate the state
+
+2-
+    - in previous module you have learned "$stateProvider" service
+    $stateProvider.state("productList",{
+                         url: "/products",
+                         templateUrl: "app/products/productListView.html",
+                         controller: "ProductListCtrl as vm"
+
+                         where "productList" is the state name
+
+    })
+
+    - another useful property beside url, templateUrl, and Controller is "resolve"
+    - Resolve:
+        - a property that can be attached to a route
+        - can provide the controller with data
+        - identify dependencies that can be used or injected into the controller,
+        if the dependecy is a promise, the promise is resolved before the controller
+        is instaniated and route is changed, this means if the code is retreieving data
+        it waits for the data to return before navigating to the associated route displaying the view
+        and this will simply the controller because it will not need to fetch data.
+        - these dependencies is defined with key/value pairs, where "key" is the name of the dependency,
+        and the value can be a string that define the name of the service that can be injected, also
+        the "value" can be a function
+        - we need resolve to retrieve the data for the product detail view.
+
+        $stateProvider.state("productDetail",{
+                              utl: "/products/:productId",
+                              templateUrl: "app/products/productDetailView.html",
+                              controller: "ProductDetailCtrl as vm",
+                              resolve: {
+                                    productResource: "productResource", //it define dependency on "productResource" (string name of the service) service that you have created
+                                    product: function(productResource, $stateParams) // it define a dependecy on the result of the defined function
+                                                {
+                                                var productId = $stateParams.productId;
+                                                return productResource.get({productId: productId}).$promise;
+
+                                                }
+                                        }
+                              })
+
+                              - "$stateParams" service is part of UI router, it is a service that is populated by current state parameters
+                              - this service is needed because "productdetail" state has a productId parameter
+                              - when the product is returned from the service, the state is activated, the controller is constructed,
+                              and the product dependency is injected into the controller, then the view in the "templateUrl" is displayed
+        })
+
+
+3- defining nested routing states:
+    - with tabs the user can navigate between multiple edit views.
+    - the most outer view is the layout template, the layout template provides the menu, and it is defined in index.html file
+    - displayed inside the layout template is the edit view.
+    - the edit view contains the edit panels and tabs, this ensures that the layout of these elements remain consistent.
+    - these details views are nested within the edit view
+    - "UIRouter" has feature that handles the routing states for the nested views.
+    - in our site map:
+        - menu -> welcomePage
+        - menu -> productList (state: productList)-> productEdit   (state: productEdit)-> Basic Info (nested state: productEdit.info)
+        - menu -> productList (state: productList)-> productEdit   (state: productEdit)-> price details (nested state: productEdit.price)
+        - menu -> productList (state: productList)-> productEdit   (state: productEdit)-> search tags (nested state: productEdit.tags)
+        - menu -> productList (state: productList)-> productDetail (state: productDetail)
+        - menu -> productEdit
+
+    - state config looks like this:
+        .state("productEdit",{
+                url: "/products/edit/:productId",
+                templateUrl: "app/products/productEditView.html",
+                controller: "ProductEditCtrl as vm"
+        })
+        .state("productEdit.info",{
+                        url: "/info",
+                        templateUrl: "app/products/productsEditInfoView.html"
+        })
+        .state("productEdit.price",{
+                        url: "/price",
+                        templateUrl: "app/products/productsEditPriceView.html"
+        })
+        .state("productEdit.tags",{
+                        url: "/tags",
+                        templateUrl: "app/products/productsEditTagsView.html"
+        })
+
+        - note that nested states does not have controller because they will share the controller
+          with the parent state.
+        - since these edit pages need to retrieve single product, so we will use "Resolve" as we did previously to retrieve
+          single project
+
+        - "UIRouter" provides a property that helps to prevent activation of parent state if it doesnot make sense
+        for your application. this property is called "abstract"
+
+        - abstract state:
+            - can not be explicity activated.
+            - activation attempt throws an exception
+            - activated implicity when child state is activated
+        - lets now add them to app.js
+
+
+    5.6- Building the Nested Templates:
+        1- Create ProductEditInfoView.html, and other html files
+        2- we also need to create the template for the "ProductEditState".
+            - this template include the panel, panel header, tab bar, space for child template to be inserted

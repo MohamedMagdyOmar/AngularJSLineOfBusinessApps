@@ -76,9 +76,45 @@
                             controller: "ProductListCtrl as vm"
                         })
                         .state("productEdit",{
+                            abstract: true,
                             url: "/products/edit/:productId",
                             templateUrl: "app/products/productEditView.html",
-                            controller: "ProductEditCtrl as vm"
+                            controller: "ProductEditCtrl as vm",
+                            resolve: {
+                                productResource: "productResource", //it define dependency on "productResource" (string name of the service) service that you have created
+                                product: function(productResource, $stateParams) // it define a dependecy on the result of the defined function
+                                {
+                                    var productId = $stateParams.productId;
+                                    return productResource.get({productId: productId}).$promise;
+                                }
+                            }
                         })
+                        .state("productEdit.info",{
+                            url: "/info",
+                            templateUrl: "app/products/productsEditInfoView.html"
+                        })
+                        .state("productEdit.price",{
+                            url: "/price",
+                            templateUrl: "app/products/productsEditPriceView.html"
+                        })
+                        .state("productEdit.tags",{
+                            url: "/tags",
+                            templateUrl: "app/products/productsEditTagsView.html"
+                        })
+
+
+                        .state("productDetail",{
+                            url: "/products/:productId",
+                            templateUrl: "app/products/productDetailView.html",
+                            controller: "ProductDetailCtrl as vm",
+                            resolve: {
+                                productResource: "productResource", //it define dependency on "productResource" (string name of the service) service that you have created
+                                product: function(productResource, $stateParams) // it define a dependecy on the result of the defined function
+                                            {
+                                                var productId = $stateParams.productId;
+                                                return productResource.get({productId: productId}).$promise;
+                                            }
+                                     }
+                                                })
                 }]);
 }());
