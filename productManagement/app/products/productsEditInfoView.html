@@ -24,5 +24,15 @@
                             ng-model="vm.product.description"/>
             </div>
         </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label"
+                   for="inputProdcutCode">Description</label>
+            <div class="col-md-4">
+                <input  class="form-control"
+                        id="inputProductCode"
+                        ui-mask="AAA-*****"
+                        ng-model="vm.product.productCode"/>
+            </div>
+        </div>
     </fieldset>
 </form>
