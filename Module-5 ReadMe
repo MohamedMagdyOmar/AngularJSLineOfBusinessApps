@@ -99,3 +99,9 @@
             - activation attempt throws an exception
             - activated implicity when child state is activated
         - lets now add them to app.js
+
+
+    5.6- Building the Nested Templates:
+        1- Create ProductEditInfoView.html, and other html files
+        2- we also need to create the template for the "ProductEditState".
+            - this template include the panel, panel header, tab bar, space for child template to be inserted

@@ -28,6 +28,7 @@
     <!--Product Controllers-->
     <script src="app/products/productListCtrl.js"></script>
     <script src="app/products/productDetailCtrl.js"></script>
+    <script src="app/products/productEditCtrl.js"></script>
 </head>
 
 <!--define the application as angular app by using ng-app directive-->
@@ -60,7 +61,10 @@
                 <ul class="nav navbar-nav">
                     <li><a ui-sref="productList">Product List</a></li>
                     <!--below productId comes from app.js when you defined the "state-->
-                    <li><a ui-sref="productEdit({productId:0})"><i class="glyphicon glyphicon-plus"></i>Add Product</a></li>
+                    <!--<li><a ui-sref="productEdit({productId:0})"><i class="glyphicon glyphicon-plus"></i>Add Product</a></li>-->
+                    <!--previously we activated the "productEdit" state, but now this state can be no longer activated -->
+                    <!--instead we now to activate one of the child state as below-->
+                    <li><a ui-sref="productEdit.info({productId:0})"><i class="glyphicon glyphicon-plus"></i>Add Product</a></li>
                 </ul>
             </div>
 

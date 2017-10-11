@@ -1,0 +1,26 @@
+<div class="panel panel-primary">
+    <div class="panel-heading" style="font-size: large">
+        {{vm.title}}
+    </div>
+    <div class="panel-body">
+        <div class="wizard">
+            <!-- ui-sref directive to activate appropriate nested state-->
+            <!-- as shown below no need to prefix with parent name-->
+            <!-- ui-sref-active directive add the defined css class to the element when related element is active this will allows to show which tab is active-->
+            <a ui-sref=".info"
+               ui-sref-active="active">
+                Basic Information
+            </a>
+            <a ui-sref=".price"
+               ui-sref-active="active">
+                Price Details
+            </a>
+            <a ui-sref=".tags"
+               ui-sref-active="active">
+                Search Tags
+            </a>
+        </div>
+        <!-- ui-view to define the location in this view where the nested view should appear-->
+        <div ui-view></div>
+    </div>
+</div>
