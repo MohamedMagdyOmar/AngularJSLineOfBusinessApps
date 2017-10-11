@@ -5,14 +5,16 @@
             <label for="inputProductName">Product Name</label>
             <input id="inputProductName"
                    type="text"
-                   placeholder="Product Name"/>
+                   placeholder="Product Name"
+                   ng-model="vm.product.productName"/>
         </div>
 
         <div>
             <label for="inputDescription">Description</label>
             <textarea id="inputDescription"
                    placeholder="Description"
-                   row="3"/>
+                   row="3"
+                   ng-model="vm.product.description"/>
         </div>
     </fieldset>
 </form>

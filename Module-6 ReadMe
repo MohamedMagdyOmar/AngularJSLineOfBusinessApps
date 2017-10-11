@@ -23,3 +23,7 @@ Data Entry Form:
         4- use the mask edit directive
         5- use a data picker directive
         6- submit the form
+
+2- Bind the UI elements to the model
+    - one of the key benefits of using angualr is "data binding" features
+    - "ng-model" directives provide 2 way binding
