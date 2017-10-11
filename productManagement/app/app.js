@@ -81,6 +81,7 @@
                             controller: "ProductEditCtrl as vm"
                         })
                         .state("productEdit",{
+                            abstract: true,
                             url: "/products/edit/:productId",
                             templateUrl: "app/products/productEditView.html",
                             controller: "ProductEditCtrl as vm",

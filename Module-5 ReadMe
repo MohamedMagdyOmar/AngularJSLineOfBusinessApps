@@ -90,4 +90,12 @@
           with the parent state.
         - since these edit pages need to retrieve single product, so we will use "Resolve" as we did previously to retrieve
           single project
+
+        - "UIRouter" provides a property that helps to prevent activation of parent state if it doesnot make sense
+        for your application. this property is called "abstract"
+
+        - abstract state:
+            - can not be explicity activated.
+            - activation attempt throws an exception
+            - activated implicity when child state is activated
         - lets now add them to app.js
