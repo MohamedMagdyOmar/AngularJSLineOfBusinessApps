@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="641c1b05-901e-4ea1-8ee1-5e923302c638" name="Default" comment="" />
+    <list default="true" id="641c1b05-901e-4ea1-8ee1-5e923302c638" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Module-6 ReadMe" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -14,78 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Module-5 ReadMe" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Module-5 ReadMe">
+      <file leaf-file-name="Module-6 ReadMe" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Module-6 ReadMe">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="763">
-              <caret line="106" column="109" lean-forward="false" selection-start-line="106" selection-start-column="109" selection-end-line="106" selection-end-column="109" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/productManagement/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="productListView.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/productManagement/app/products/productListView.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1008">
-              <caret line="48" column="43" lean-forward="false" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="productDetailCtrl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/productManagement/app/products/productDetailCtrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="5" column="38" lean-forward="false" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/productManagement/app/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="76" column="26" lean-forward="false" selection-start-line="76" selection-start-column="26" selection-end-line="76" selection-end-column="26" />
-              <folding>
-                <element signature="e#82#136#0" expanded="false" />
-                <element signature="e#380#494#0" expanded="false" />
-                <element signature="e#1047#1056#0" expanded="false" />
-                <element signature="e#1348#1356#0" expanded="false" />
-                <element signature="e#1791#1829#0" expanded="false" />
-                <element signature="e#2273#2351#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/productManagement/css/app.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="17" column="16" lean-forward="false" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProductEditCtrl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/productManagement/app/products/ProductEditCtrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="5" column="46" lean-forward="true" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+            <state relative-caret-position="504">
+              <caret line="24" column="26" lean-forward="false" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -147,6 +83,7 @@
         <option value="$PROJECT_DIR$/productManagement/app/products/productDetailCtrl.js" />
         <option value="$PROJECT_DIR$/productManagement/app/app.js" />
         <option value="$PROJECT_DIR$/productManagement/css/app.css" />
+        <option value="$PROJECT_DIR$/Module-6 ReadMe" />
       </list>
     </option>
   </component>
@@ -156,9 +93,8 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="960" />
     <option name="width" value="960" />
     <option name="height" value="1032" />
   </component>
@@ -183,43 +119,6 @@
             <path>
               <item name="AngularJSLineOfBusinessApps" type="b2602c69:ProjectViewProjectNode" />
               <item name="AngularJSLineOfBusinessApps" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AngularJSLineOfBusinessApps" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AngularJSLineOfBusinessApps" type="462c0819:PsiDirectoryNode" />
-              <item name="productManagement" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AngularJSLineOfBusinessApps" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AngularJSLineOfBusinessApps" type="462c0819:PsiDirectoryNode" />
-              <item name="productManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AngularJSLineOfBusinessApps" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AngularJSLineOfBusinessApps" type="462c0819:PsiDirectoryNode" />
-              <item name="productManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="products" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AngularJSLineOfBusinessApps" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AngularJSLineOfBusinessApps" type="462c0819:PsiDirectoryNode" />
-              <item name="productManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AngularJSLineOfBusinessApps" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AngularJSLineOfBusinessApps" type="462c0819:PsiDirectoryNode" />
-              <item name="productManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AngularJSLineOfBusinessApps" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AngularJSLineOfBusinessApps" type="462c0819:PsiDirectoryNode" />
-              <item name="productManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -264,21 +163,21 @@
       <workItem from="1507526712673" duration="42000" />
       <workItem from="1507526767265" duration="16693000" />
       <workItem from="1507613083342" duration="17389000" />
-      <workItem from="1507705186768" duration="8375000" />
+      <workItem from="1507705186768" duration="9562000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62128000" />
+    <option name="totallyTimeSpent" value="63315000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1050" extended-state="7" />
+    <frame x="960" y="0" width="960" height="1032" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31614584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2430998" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33187774" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3363029" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -553,7 +452,7 @@
         <state relative-caret-position="103">
           <caret line="1191" column="0" lean-forward="false" selection-start-line="1191" selection-start-column="0" selection-end-line="1191" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
             <element signature="e#43233#46918#0" expanded="false" />
             <element signature="e#46954#47032#0" expanded="false" />
             <element signature="e#47074#48042#0" expanded="false" />
@@ -644,22 +543,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Module-5 ReadMe">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="763">
-          <caret line="106" column="109" lean-forward="false" selection-start-line="106" selection-start-column="109" selection-end-line="106" selection-end-column="109" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/productManagement/app/products/productListView.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="48" column="43" lean-forward="false" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/productManagement/app/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -685,8 +568,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/productManagement/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+        <state relative-caret-position="441">
+          <caret line="21" column="38" lean-forward="true" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/productManagement/app/products/productListView.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
+          <caret line="48" column="43" lean-forward="false" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Module-5 ReadMe">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="763">
+          <caret line="106" column="109" lean-forward="false" selection-start-line="106" selection-start-column="109" selection-end-line="106" selection-end-column="109" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Module-6 ReadMe">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="24" column="26" lean-forward="false" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
           <folding />
         </state>
       </provider>

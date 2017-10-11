@@ -1,0 +1,25 @@
+Data Entry Form:
+    - Facilitate -> Relevant, accurate, and valid data.
+    - Prevent -> Incorrect, invalid, and erroneous data
+    - Through -> Clarity, Helpful data entry controls
+    - Validation
+
+    -Clarity: achieved through
+        - defining Intent
+            - Clear Label
+            - Placeholder
+        - Organization:
+            - Toolbar
+            - Tabs
+
+    - Data Entry Controls:
+        - Mask Edit -> restrict the text that can be entered.
+        - Date Picker
+
+    - Module Objectives:
+        1- Create a Data Entry Form
+        2- Bind the UI elements to the model
+        3- style the form with bootstrap
+        4- use the mask edit directive
+        5- use a data picker directive
+        6- submit the form
