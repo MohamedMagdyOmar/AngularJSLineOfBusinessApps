@@ -1,0 +1,17 @@
+Validation Forms:
+
+Introduction:
+    - Validation Techniques:
+        - Type Attribute -> .type="email"
+        - Required Attribute -> .required
+        - Angular Validation Attributes -> .ng-minlength
+        - custom angular directive -> .my-directive=""
+        - code in the controller -> .if{}
+
+    - Module Objectives:
+        - Prepare the Form for validation
+        - Identify required fields
+        - Mark Invalid Elements
+        - Display Messages
+        - Use angular validation attributes
+        - Prevent Submit
