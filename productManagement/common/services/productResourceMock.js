@@ -120,7 +120,8 @@
                 // new product Id
                 // assign productId for the new product
                 // update list of products
-                product.productId = products[product.length - 1].productId + 1;
+                console.log(products)
+                product.productId = products[products.length - 1].productId + 1;
                 products.push(product);
             }
             else
