@@ -18,6 +18,15 @@
         {
             vm.title = "New Product";
         }
+
+        vm.open = function($event)
+        {
+            $event.preventDefault();
+            $event.stopPropagation();
+            // to prevent event from propagating
+
+            vm.opened = !vm.opened;
+        }
     }
 
 }());

@@ -12,6 +12,37 @@
                         ng-model="vm.product.productName"/>
             </div>
         </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label"
+                   for="inputProductCode">Description</label>
+            <div class="col-md-4">
+                <input  class="form-control"
+                        id="inputProductCode"
+                        ui-mask="AAA-*****"
+                        ng-model="vm.product.productCode"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label" for="inputAvailabilityDate">Availability</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input class="form-control"
+                            id="inputAvailabilityDate"
+                            type="text"
+                            datepicker-popup="MMM dd, yyyy"
+                            is-open="vm.opened"
+                            ng-model="vm.product.releaseDate"/>
+
+                    <span class="input-group-btn">
+                        <button class="btn btn-default"
+                                ng-click="vm.open($event)">
+                            <i class="glyphicon glyphicon-calendar"/>
+                        </button>
+                    </span>
+                </div>
+
+            </div>
+        </div>
 
         <div class="form-group">
             <label class="col-md-2 control-label"
@@ -24,15 +55,6 @@
                             ng-model="vm.product.description"/>
             </div>
         </div>
-        <div class="form-group">
-            <label class="col-md-2 control-label"
-                   for="inputProdcutCode">Description</label>
-            <div class="col-md-4">
-                <input  class="form-control"
-                        id="inputProductCode"
-                        ui-mask="AAA-*****"
-                        ng-model="vm.product.productCode"/>
-            </div>
-        </div>
+
     </fieldset>
 </form>

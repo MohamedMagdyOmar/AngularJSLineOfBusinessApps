@@ -48,6 +48,7 @@
         ["common.services",
             "ui.router",
             "ui.mask",
+            "ui.bootstrap",
             "productResourceMock"]);
 
     //using strict inside IIFE, puts the entire content of the IIFE in strict mode
