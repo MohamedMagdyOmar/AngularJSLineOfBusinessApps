@@ -27,4 +27,5 @@ Introduction:
     - on all previous modules we were using basic html tags like "form" tag shown above,
     to create a data entry form in angular app, angular has set of directives that replace standard html elements.
 
-    - this replacement done automatically
+
+- Identify required fields
