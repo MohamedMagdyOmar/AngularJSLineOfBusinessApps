@@ -15,3 +15,16 @@ Introduction:
         - Display Messages
         - Use angular validation attributes
         - Prevent Submit
+
+
+- Prepare the Form for validation:
+    - Ensure the form has a name, that name is used to reference the control on the form from angular
+        <form class="form-horizontal" name="productForm">
+
+    - Set the novalidate attribute, this turns off browser built in validation, and allows angular to handle the validation instead.
+        <form class="form-horizontal" name="productForm" novalidate>
+
+    - on all previous modules we were using basic html tags like "form" tag shown above,
+    to create a data entry form in angular app, angular has set of directives that replace standard html elements.
+
+    - this replacement done automatically
