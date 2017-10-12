@@ -27,3 +27,22 @@ Data Entry Form:
 2- Bind the UI elements to the model
     - one of the key benefits of using angualr is "data binding" features
     - "ng-model" directives provide 2 way binding
+
+6- submit the form:
+    - for saving data:
+        - resource for communication with the web server
+        function productResource($resource)
+        {
+            return $resource("/api/prodcuts/:productId")
+        }
+
+        - mock of the resource Url, so we can run the application without web server
+        $httpBackend.whenPost(productUrl).respond(function (method, url, data)
+        {})
+
+        - "UI element" for user to click to perform the save operation
+        - submit function to be executed when the user click the save
+         vm.submit = function(savedProduct)
+         {
+            savedProduct.$save();
+         }
