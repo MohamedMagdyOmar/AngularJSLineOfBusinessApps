@@ -1,0 +1,121 @@
+Exception Handling:
+    1- Introduction:
+        - Module Objectives:
+            1- Evaluate exception handling options
+            2- Catch runtime errors with try/catch
+            3- use global exception handler
+            4- Implement failure functions for async operations
+
+        - there are several options when implementing exception handling:
+            1- prevent the error entirely
+            2- catch the exception
+            3- notify the user
+            4- log information about the exception
+
+        - the most common way to catch exception in angular applications are with
+        try/catch block
+        - or you can use global exception handler: $exceptionHandler
+        - or you can use failure functions
+
+    2- try/catch:
+        a- try execution of a specific set of a code
+        b- catch any runtime exceptions
+        c- perform any final clean up on a success or failure
+
+        eg:
+        vm.addTags = function(tags)
+        {
+        try{
+            var array = tags.split(',');
+            vm.tags = vm.tags.concat(array);
+            vm.newTags = "";
+            }
+        catch (e){
+                alert("please enter tags")
+                }
+        }
+
+        but it is better to use defensive code as below using if statement rather than using try/catch because try/catch
+        may mask the actual error, for example if "vm" is undefined it will throw exception
+        to enter tags although the real problem is that "vm" is undefined
+
+        vm.addTags = function(tags)
+                {
+                if(tags)
+                    {
+                        var array = tags.split(',');
+                        vm.tags = vm.tags.concat(array);
+                        vm.newTags = "";
+                    }
+                else{
+                      alert("please enter tags")
+                    }
+                }
+
+    2- $exceptionHandler service:
+        a- built-in angular service
+        b- any uncaught exception is delegated to this service
+        c- only catches exceptions, it does not handle communication error, or syntax error
+        d- default implementation logs the error to the browser console
+        e- you can decorate this service to customize it.
+
+        Decorating $exceptionHandler:
+
+        // - decorator method of the $provide service can intercept request for a service
+        //   in order to provide additional or different functionality
+        // - the decorator method takes 2 parameters
+        //  1- string name of [$exceptionHandler] of the service being decorated
+        //  2- main safe array, containing of each decorator function parameter
+        // - then the decorator function itself
+        // - the decorator function has dependency on $delegate, so it is listed in main safe array,
+        // and list in function parameter
+        // - $delegate allows you to call the main implementation of that service
+        // - the returned function has 2 parameters:
+        //      1- exception -> in example below we update the exception message to a custom message
+        //      2- cause -> we use $delegate to call the base implementation of the service
+        // the base implementation simply logs the error in the console
+
+        app.config(function ($provide){
+        $provide.decorator("$exceptionHandler",["$delegate",
+        function($delegate){
+        return function(exception, cause){
+        exception.message = "Please contact the help Desk! \n Message: " + exception.message;
+        $delegate(exception, cause);
+        alert(exception.message);
+        };
+        }]
+        );
+        });
+
+
+    angular Promise:
+        - it allows us to handle ascync operations such as adding or deleting
+        data using backend web service
+
+        - it works as follows:
+            1- a function in angular app launch an asynchronous operation
+                - this async operation begin execution
+                - optionally you can call a call back function to recieve a status notification
+                - when the operation complete (with success or failure)
+                - you can optionally write a call back function to process the return data or other operation
+                if successful
+                - you can optionally write a call back function to process the response when the operation
+                  fails
+
+            2- the function immediately returns to the main code
+
+        - failure callback function:
+            - angular promises provide a "then" function
+                -executed when the promise is resolved or rejected
+            - "then" takes three parameters
+                - success callback function
+                - failure callback function
+                - notification callback function
+
+            eg:
+            somePromise.then(function(response)
+            {alert('Success');},
+            function(response)
+            {alert('failed');},
+            function(statusNotification)
+            {alert('Got notification');});

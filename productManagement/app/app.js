@@ -56,6 +56,18 @@
     // for example using un assigned variable will cause an exception as an example:
     // app = angular.module("productManagement", []);
 
+    app.config(function ($provide){
+        $provide.decorator("$exceptionHandler",["$delegate",
+            function($delegate){
+                return function(exception, cause){
+                    exception.message = "Please contact the help Desk! \n Message: " + exception.message;
+                    $delegate(exception, cause);
+                    alert(exception.message);
+                };
+            }]
+        );
+    });
+
     // by adding "common.services" it is now accessible to any place in our application
 
     // 4.5
@@ -118,5 +130,29 @@
                                             }
                                      }
                                                 })
+
+                        .state("priceAnalytics",{
+                            url: "/priceAnalytics",
+                            templateUrl: "app/prices/priceAnalyticsView.html",
+                            controller: "priceAnalyticsCtrl as vm",
+                            resolve: {
+                                productResource: "productResource", //it define dependency on "productResource" (string name of the service) service that you have created
+
+                                products: function(productResource) // it define a dependecy on the result of the defined function
+                                {
+                                    return productResource.query(function(response){
+                                        // no code needed for success
+                                    },
+                                    function(response){
+                                        if(response.status == 404){
+                                            alert("Error accessing resource: " + response.config.method + " " +response.config.url);
+                                        }
+                                        else{
+                                            alert(response.statusText);
+                                        }
+                                    }).$promise;
+                                }
+                            }
+                        })
                 }]);
 }());
