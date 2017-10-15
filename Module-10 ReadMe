@@ -16,3 +16,38 @@ Exception Handling:
         try/catch block
         - or you can use global exception handler: $exceptionHandler
         - or you can use failure functions
+
+    2- try/catch:
+        a- try execution of a specific set of a code
+        b- catch any runtime exceptions
+        c- perform any final clean up on a success or failure
+
+        eg:
+        vm.addTags = function(tags)
+        {
+        try{
+            var array = tags.split(',');
+            vm.tags = vm.tags.concat(array);
+            vm.newTags = "";
+            }
+        catch (e){
+                alert("please enter tags")
+                }
+        }
+
+        but it is better to use defensive code as below using if statement rather than using try/catch because try/catch
+        may mask the actual error, for example if "vm" is undefined it will throw exception
+        to enter tags although the real problem is that "vm" is undefined
+
+        vm.addTags = function(tags)
+                {
+                if(tags)
+                    {
+                        var array = tags.split(',');
+                        vm.tags = vm.tags.concat(array);
+                        vm.newTags = "";
+                    }
+                else{
+                      alert("please enter tags")
+                    }
+                }
