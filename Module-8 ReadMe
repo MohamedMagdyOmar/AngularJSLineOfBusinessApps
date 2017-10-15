@@ -18,8 +18,8 @@
             - prefixed with a $
             -examples :$http, $resource, $httpbackend
         custom services:
-            -service mthod -> definesa function that can be constructed
-            - factory method -> function that can be invked
+            -service method -> defines a function that can be constructed
+            - factory method -> function that can be invoked
 
     - Factory Method:
         - register the service using the factory method:
