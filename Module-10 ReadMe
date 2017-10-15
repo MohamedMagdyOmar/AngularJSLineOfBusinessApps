@@ -51,3 +51,39 @@ Exception Handling:
                       alert("please enter tags")
                     }
                 }
+
+    2- $exceptionHandler service:
+        a- built-in angular service
+        b- any uncaught exception is delegated to this service
+        c- only catches exceptions, it does not handle communication error, or syntax error
+        d- default implementation logs the error to the browser console
+        e- you can decorate this service to customize it.
+
+        Decorating $exceptionHandler:
+
+        // - decorator method of the $provide service can intercept request for a service
+        //   in order to provide additional or different functionality
+        // - the decorator method takes 2 parameters
+        //  1- string name of [$exceptionHandler] of the service being decorated
+        //  2- main safe array, containing of each decorator function parameter
+        // - then the decorator function itself
+        // - the decorator function has dependency on $delegate, so it is listed in main safe array,
+        // and list in function parameter
+        // - $delegate allows you to call the main implementation of that service
+        // - the returned function has 2 parameters:
+        //      1- exception -> in example below we update the exception message to a custom message
+        //      2- cause -> we use $delegate to call the base implementation of the service
+        // the base implementation simply logs the error in the console
+
+        app.config(function ($provide){
+        $provide.decorator("$exceptionHandler",["$delegate",
+        function($delegate){
+        return function(exception, cause){
+        exception.message = "Please contact the help Desk! \n Message: " + exception.message;
+        $delegate(exception, cause);
+        alert(exception.message);
+        };
+        }]
+        );
+        });
+

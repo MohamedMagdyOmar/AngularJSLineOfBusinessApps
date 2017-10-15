@@ -56,6 +56,18 @@
     // for example using un assigned variable will cause an exception as an example:
     // app = angular.module("productManagement", []);
 
+    app.config(function ($provide){
+        $provide.decorator("$exceptionHandler",["$delegate",
+            function($delegate){
+                return function(exception, cause){
+                    exception.message = "Please contact the help Desk! \n Message: " + exception.message;
+                    $delegate(exception, cause);
+                    alert(exception.message);
+                };
+            }]
+        );
+    });
+
     // by adding "common.services" it is now accessible to any place in our application
 
     // 4.5
