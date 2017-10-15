@@ -1,0 +1,18 @@
+Exception Handling:
+    1- Introduction:
+        - Module Objectives:
+            1- Evaluate exception handling options
+            2- Catch runtime errors with try/catch
+            3- use global exception handler
+            4- Implement failure functions for async operations
+
+        - there are several options when implementing exception handling:
+            1- prevent the error entirely
+            2- catch the exception
+            3- notify the user
+            4- log information about the exception
+
+        - the most common way to catch exception in angular applications are with
+        try/catch block
+        - or you can use global exception handler: $exceptionHandler
+        - or you can use failure functions
