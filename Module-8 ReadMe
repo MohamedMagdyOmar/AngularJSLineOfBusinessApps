@@ -1,0 +1,42 @@
+8- Defining Business Logic in an Angular Service
+    - angular services is Angular code that can be used to:
+        - organize application logic
+        - Encapsulate logic not directly related to a view or model
+        - share logic (or data) across the application
+
+    - Services can be:
+        - injected into any controller or other service
+        - make it easily to use
+
+    - services are:
+        - lazily instantiated
+        - singletons -> each component that depends on the service gets the same instance of the service,
+        so you can keep data around of the life time of the application
+
+    - built-in vs custom services:
+        -built-in services:
+            - prefixed with a $
+            -examples :$http, $resource, $httpbackend
+        custom services:
+            -service mthod -> definesa function that can be constructed
+            - factory method -> function that can be invked
+
+    - Factory Method:
+        - register the service using the factory method:
+            - name
+            - factory function
+
+            to register a service:
+                angular.module("common.services")
+                .factory("productsService", // service name
+                          productsService)  // service factory function
+
+                function productService(){
+
+                }
+
+    - steps for Creating a Custom Service:
+        1- Create a new Javascript file
+        2- insert a script tag into index.html
+        3- register the service with a module
+        4- write the service factory function
