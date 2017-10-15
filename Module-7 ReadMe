@@ -29,3 +29,50 @@ Introduction:
 
 
 - Identify required fields
+
+- Mark Invalid Elements:
+    - mark invalid elements relies on 3 features:
+        1- ngClass directive
+        2- bootstrap styles
+        3- angular validation states
+
+        eg: ng-class="{'has-error':
+                productForm.inputProductName.$invalid}"
+
+                - has-error -> is bootstrap styles
+                - $invalid -> angular validation states
+
+        - ngClass Directive:
+            - allows sets a css class dynamically, based on an expression that defines the style classes
+            - the expression can be:
+                - "A string" contain space delimited class names
+                - "An Array" whose elements are string contain space delimited class names
+                - "An Object Literal" define a set of key value pairs eg: ng-class="{'has-error':productForm.inputProductName.$invalid}"
+                in this example the "key" is 'has-error' it is the name of the bootsTrap style class
+                "value" is an expression that is evaluated in this example productForm.inputProductName.$invalid
+
+                if the expression is truth the class name defined in the "key" is applied to the element
+
+
+        - Bootstrap validation styles:
+            - bootstrap provides several validation styles:
+                - .has-success style
+                - .has-warning style
+                - .has-error style
+
+        - angular validation states:
+            - angular provides a number of validation states.
+                - $pristine -> entry has not been changed
+                - $dirty -> entry hs been changed
+                - $valid -> entry is valid based on defined validation for the element
+                - $invalid -> entry is invalid based on defined validation for the element
+                - $error -> - all validations and whether they are valid or invalid
+                            - it is a set of key value pair
+                            - "key" is the name of validation role applied to the element
+                            - "Value" is a boolean, false -> if validation role is broken
+
+
+            - in order to use "angular validation states" in the form there are some pre-requisites:
+                1- form must have a name
+                2- input element must have a name
+                3- input element must include ngModel
