@@ -76,3 +76,13 @@ Introduction:
                 1- form must have a name
                 2- input element must have a name
                 3- input element must include ngModel
+
+- Display Messages:
+    - there are many ways to display a validation messages:
+        1- Alert Box (Not Good) because it interrupts user entry flow, as the user has to respond immediately to the alert
+        2- validate message area in the form
+        3- adjacent to the input element
+
+    to display error message:
+        <span class="help-block has-error"
+                ng-show="productForm.inputProductName.$invalid"> Product name is required</span>
