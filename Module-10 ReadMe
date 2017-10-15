@@ -87,3 +87,35 @@ Exception Handling:
         );
         });
 
+
+    angular Promise:
+        - it allows us to handle ascync operations such as adding or deleting
+        data using backend web service
+
+        - it works as follows:
+            1- a function in angular app launch an asynchronous operation
+                - this async operation begin execution
+                - optionally you can call a call back function to recieve a status notification
+                - when the operation complete (with success or failure)
+                - you can optionally write a call back function to process the return data or other operation
+                if successful
+                - you can optionally write a call back function to process the response when the operation
+                  fails
+
+            2- the function immediately returns to the main code
+
+        - failure callback function:
+            - angular promises provide a "then" function
+                -executed when the promise is resolved or rejected
+            - "then" takes three parameters
+                - success callback function
+                - failure callback function
+                - notification callback function
+
+            eg:
+            somePromise.then(function(response)
+            {alert('Success');},
+            function(response)
+            {alert('failed');},
+            function(statusNotification)
+            {alert('Got notification');});

@@ -130,5 +130,29 @@
                                             }
                                      }
                                                 })
+
+                        .state("priceAnalytics",{
+                            url: "/priceAnalytics",
+                            templateUrl: "app/prices/priceAnalyticsView.html",
+                            controller: "priceAnalyticsCtrl as vm",
+                            resolve: {
+                                productResource: "productResource", //it define dependency on "productResource" (string name of the service) service that you have created
+
+                                products: function(productResource) // it define a dependecy on the result of the defined function
+                                {
+                                    return productResource.query(function(response){
+                                        // no code needed for success
+                                    },
+                                    function(response){
+                                        if(response.status == 404){
+                                            alert("Error accessing resource: " + response.config.method + " " +response.config.url);
+                                        }
+                                        else{
+                                            alert(response.statusText);
+                                        }
+                                    }).$promise;
+                                }
+                            }
+                        })
                 }]);
 }());

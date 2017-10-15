@@ -11,6 +11,6 @@
     }
 
 
-    // now we need to tel our main module about the new created common services module using dependency.
+    // now we need to tell our main module about the new created common services module using dependency.
     // go and check dependency in app.js
 }())
