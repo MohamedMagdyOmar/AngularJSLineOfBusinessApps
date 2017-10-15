@@ -86,3 +86,33 @@ Introduction:
     to display error message:
         <span class="help-block has-error"
                 ng-show="productForm.inputProductName.$invalid"> Product name is required</span>
+
+
+- Angular Validation Directives
+    -ng-minlength -> min required length
+    -ng-maxlength
+    -ng-pattern -> validates an entry against certain pattern expression
+    -ng-change -> allows the definition of an expression that is evaluated when the content of input elements is changed, this allows custom validation code
+
+    -show different messages for diff error:
+        1-
+            - ng-messages
+            - it is directives that shows or hides messages based on key value pair
+            - similar to a switch or case statement
+
+            - ng-message
+            -it directive that defines specific cases
+            -not available until angular 1.3
+            <span class="help-block has-error">
+            <span ng-messages="productForm.pn.$error">
+                <span ng-message="required">required</span>
+                <span ng-message="minlength">min of 4 chars</span>
+                <span ng-message="maxlength">max of 12 chars</span>
+            </span>
+
+        2- using ng-show:
+          <span class="help-block has-error"
+            <span ng-show="productForm.inputProductName.$error.required"> Product Name is Required</span>
+            <span ng-show="productForm.inputProductName.$error.minlength"> must be 4 char</span>
+            <span ng-show="productForm.inputProductName.$error.maxlength"> can not exceed 12 chars</span>
+          </span>
