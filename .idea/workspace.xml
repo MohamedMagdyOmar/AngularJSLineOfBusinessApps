@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="641c1b05-901e-4ea1-8ee1-5e923302c638" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Module-8 ReadMe" afterPath="$PROJECT_DIR$/Module-8 ReadMe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/productManagement/app/products/productDetailCtrl.js" afterPath="$PROJECT_DIR$/productManagement/app/products/productDetailCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/productManagement/app/products/productDetailView.html" afterPath="$PROJECT_DIR$/productManagement/app/products/productDetailView.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/productManagement/app/products/ProductEditCtrl.js" afterPath="$PROJECT_DIR$/productManagement/app/products/ProductEditCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/productManagement/app/products/productsEditPriceView.html" afterPath="$PROJECT_DIR$/productManagement/app/products/productsEditPriceView.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,6 +27,25 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="ProductEditCtrl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/productManagement/app/products/ProductEditCtrl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding>
+                <element signature="e#585#689#0" expanded="false" />
+                <element signature="e#1259#1328#0" expanded="false" />
+                <element signature="e#1350#1399#0" expanded="false" />
+                <element signature="e#1444#1616#0" expanded="false" />
+                <element signature="e#1664#1976#0" expanded="false" />
+                <element signature="e#2017#2196#0" expanded="false" />
+                <element signature="e#2242#2590#0" expanded="false" />
+                <element signature="e#2637#2692#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Module-8 ReadMe" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Module-8 ReadMe">
           <provider selected="true" editor-type-id="text-editor">
@@ -38,63 +56,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="productService.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/productManagement/common/services/productService.js">
+      <file leaf-file-name="productsEditPriceView.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/productManagement/app/products/productsEditPriceView.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="30" column="57" lean-forward="true" selection-start-line="30" selection-start-column="57" selection-end-line="30" selection-end-column="57" />
+            <state relative-caret-position="273">
+              <caret line="61" column="59" lean-forward="false" selection-start-line="61" selection-start-column="45" selection-end-line="61" selection-end-column="59" />
               <folding>
-                <element signature="e#227#450#0" expanded="false" />
-                <element signature="e#512#675#0" expanded="false" />
-                <element signature="e#743#982#0" expanded="false" />
-                <element signature="e#1048#1244#0" expanded="false" />
+                <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#1;n#div#0;n#div#1;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#div#2;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#div#3;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#0;n#div#4;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#5;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#span#0;n#div#0;n#div#6;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#span#1;n#div#0;n#div#6;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
+                <marker date="1508059257161" expanded="true" signature="184:308" ph="{...}" />
+                <marker date="1508059257161" expanded="true" signature="1739:1881" ph="{...}" />
+                <marker date="1508059257161" expanded="true" signature="3450:3606" ph="{...}" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="productDetailCtrl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/productManagement/app/products/productDetailCtrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="productDetailView.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/productManagement/app/products/productDetailView.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="40" column="73" lean-forward="false" selection-start-line="40" selection-start-column="73" selection-end-line="40" selection-end-column="73" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="productsEditInfoView.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/productManagement/app/products/productsEditInfoView.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="81" column="32" lean-forward="true" selection-start-line="81" selection-start-column="32" selection-end-line="81" selection-end-column="32" />
-              <folding>
-                <element signature="n#style#0;n#button#0;n#span#0;n#div#0;n#div#4;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#span#1;n#div#0;n#div#4;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
-                <marker date="1508052794017" expanded="true" signature="370:488" ph="{...}" />
-                <marker date="1508052794017" expanded="true" signature="370:489" ph="{...}" />
-                <marker date="1508052794017" expanded="true" signature="1595:1725" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProductEditCtrl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/productManagement/app/products/ProductEditCtrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="40" column="65" lean-forward="false" selection-start-line="40" selection-start-column="65" selection-end-line="40" selection-end-column="65" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -123,6 +106,7 @@
       <find>v2</find>
       <find>v2.open</find>
       <find>productTagsForm</find>
+      <find>calculatePrice</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -145,7 +129,6 @@
         <option value="$PROJECT_DIR$/Module-3 ReadMe" />
         <option value="$PROJECT_DIR$/Module-4 ReadMe" />
         <option value="$PROJECT_DIR$/productManagement/app/welcomeView.html" />
-        <option value="$PROJECT_DIR$/productManagement/app/products/productsEditPriceView.html" />
         <option value="$PROJECT_DIR$/Module-5 ReadMe" />
         <option value="$PROJECT_DIR$/productManagement/app/products/ProductEditView.html" />
         <option value="$PROJECT_DIR$/productManagement/app/products/productListView.html" />
@@ -155,13 +138,14 @@
         <option value="$PROJECT_DIR$/productManagement/common/services/productResourceMock.js" />
         <option value="$PROJECT_DIR$/Module-7 ReadMe" />
         <option value="$PROJECT_DIR$/productManagement/app/products/productsEditTagsView.html" />
-        <option value="$PROJECT_DIR$/productManagement/app/products/ProductEditCtrl.js" />
         <option value="$PROJECT_DIR$/productManagement/app/products/productsEditInfoView.html" />
         <option value="$PROJECT_DIR$/productManagement/index.html" />
         <option value="$PROJECT_DIR$/productManagement/common/services/productService.js" />
         <option value="$PROJECT_DIR$/Module-8 ReadMe" />
         <option value="$PROJECT_DIR$/productManagement/app/products/productDetailCtrl.js" />
         <option value="$PROJECT_DIR$/productManagement/app/products/productDetailView.html" />
+        <option value="$PROJECT_DIR$/productManagement/app/products/productsEditPriceView.html" />
+        <option value="$PROJECT_DIR$/productManagement/app/products/ProductEditCtrl.js" />
       </list>
     </option>
   </component>
@@ -171,7 +155,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="960" />
     <option name="width" value="960" />
     <option name="height" value="1032" />
@@ -280,13 +264,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84499000" />
+    <option name="totallyTimeSpent" value="85748000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="960" y="0" width="960" height="1032" extended-state="0" />
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38641188" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38641188" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33187774" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3363029" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -560,13 +544,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/productManagement/app/products/productsEditPriceView.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/productManagement/app/products/productListView.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1008">
@@ -623,14 +600,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/productManagement/app/products/ProductEditCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="40" column="65" lean-forward="false" selection-start-line="40" selection-start-column="65" selection-end-line="40" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/productManagement/common/services/common.services.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -673,14 +642,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Module-8 ReadMe">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="652">
-          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/productManagement/common/services/productService.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
@@ -707,6 +668,55 @@
         <state relative-caret-position="645">
           <caret line="40" column="73" lean-forward="false" selection-start-line="40" selection-start-column="73" selection-end-line="40" selection-end-column="73" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Module-8 ReadMe">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="652">
+          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/productManagement/app/products/productsEditPriceView.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="61" column="59" lean-forward="false" selection-start-line="61" selection-start-column="45" selection-end-line="61" selection-end-column="59" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#1;n#div#0;n#div#1;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#div#2;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#div#3;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#4;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#5;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#span#0;n#div#0;n#div#6;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#span#1;n#div#0;n#div#6;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
+            <marker date="1508059257161" expanded="true" signature="184:308" ph="{...}" />
+            <marker date="1508059257161" expanded="true" signature="1739:1881" ph="{...}" />
+            <marker date="1508059257161" expanded="true" signature="3450:3606" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/productManagement/app/products/ProductEditCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding>
+            <element signature="e#585#689#0" expanded="false" />
+            <element signature="e#1259#1328#0" expanded="false" />
+            <element signature="e#1350#1399#0" expanded="false" />
+            <element signature="e#1444#1616#0" expanded="false" />
+            <element signature="e#1664#1976#0" expanded="false" />
+            <element signature="e#2017#2196#0" expanded="false" />
+            <element signature="e#2242#2590#0" expanded="false" />
+            <element signature="e#2637#2692#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
