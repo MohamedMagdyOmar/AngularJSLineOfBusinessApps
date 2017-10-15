@@ -116,3 +116,10 @@ Introduction:
             <span ng-show="productForm.inputProductName.$error.minlength"> must be 4 char</span>
             <span ng-show="productForm.inputProductName.$error.maxlength"> can not exceed 12 chars</span>
           </span>
+
+- Prevent Submit:
+    - disable the save button
+        ng-disabled="productForm.$invalid"
+
+    - display a message
+        ng-click="vm.submit(productForm.$valid)"
