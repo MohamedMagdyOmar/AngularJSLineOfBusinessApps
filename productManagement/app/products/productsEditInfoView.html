@@ -1,26 +1,50 @@
-<form class="form-horizontal" name="productForm">
+<!-- 1- form name is here-->
+<form class="form-horizontal" name="productForm" novalidate>
     <fieldset>
         <legend>Basic Product Information</legend>
-        <div class="form-group">
+        <!-- has-error is the bootstrap class name-->
+        <!-- "productForm" is the form name -->
+        <!-- "inputProductName" is the input element name-->
+
+        <div class="form-group"
+        ng-class="{'has-error':productForm.inputProductName.$invalid  &&
+                            productForm.inputProductName.$dirty}">
             <label class="col-md-2 control-label"
                    for="inputProductName">Product Name</label>
             <div class="col-md-4">
+                <!-- 2- name of the input element is here-->
                 <input  class="form-control"
                         id="inputProductName"
+                        name="inputProductName"
                         type="text"
-                        placeholder="Product Name"
-                        ng-model="vm.product.productName"/>
+                        placeholder="Product Name (required)"
+                        ng-model="vm.product.productName"
+                        required
+                        ng-minlength="4"
+                        ng-maxlength="12"/>
             </div>
+            <span class="help-block has-error">
+                <span ng-show="productForm.inputProductName.$error.required"> Product Name is Required</span>
+                <span ng-show="productForm.inputProductName.$error.minlength"> must be 4 char</span>
+                <span ng-show="productForm.inputProductName.$error.maxlength"> can not exceed 12 chars</span>
+            </span>
         </div>
-        <div class="form-group">
+        <div class="form-group"
+                ng-class="{'has-error':productForm.inputProductCode.$invalid &&
+                                        productForm.inputProductCode.$dirty}">
             <label class="col-md-2 control-label"
-                   for="inputProductCode">Description</label>
+                   for="inputProductCode">Product Code</label>
             <div class="col-md-4">
+                <!-- 2- name of the input element is here-->
                 <input  class="form-control"
                         id="inputProductCode"
-                        ui-mask="AAA-*****"
-                        ng-model="vm.product.productCode"/>
+                        name="inputProductCode"
+                        ui-mask="AAA-***** (required)"
+                        ng-model="vm.product.productCode"
+                        required/>
             </div>
+            <span class="help-block has-error"
+                  ng-show="productForm.inputProductCode.$invalid"> Product code is required</span>
         </div>
         <div class="form-group">
             <label class="col-md-2 control-label" for="inputAvailabilityDate">Availability</label>
@@ -60,7 +84,9 @@
                 <span>
                     <button class="btn btn-primary"
                             style="width:80px; margin-right:10px"
-                            ng-click="vm.submit()"> Save </button>
+                            ng-click="vm.submit(productForm.$valid)"
+                           > Save </button>
+                    <!-- ng-disabled="productForm.$invalid"-->
                 </span>
                 <span>
                     <button class="btn btn-default"

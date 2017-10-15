@@ -1,0 +1,125 @@
+Validation Forms:
+
+Introduction:
+    - Validation Techniques:
+        - Type Attribute -> .type="email"
+        - Required Attribute -> .required
+        - Angular Validation Attributes -> .ng-minlength
+        - custom angular directive -> .my-directive=""
+        - code in the controller -> .if{}
+
+    - Module Objectives:
+        - Prepare the Form for validation
+        - Identify required fields
+        - Mark Invalid Elements
+        - Display Messages
+        - Use angular validation attributes
+        - Prevent Submit
+
+
+- Prepare the Form for validation:
+    - Ensure the form has a name, that name is used to reference the control on the form from angular
+        <form class="form-horizontal" name="productForm">
+
+    - Set the novalidate attribute, this turns off browser built in validation, and allows angular to handle the validation instead.
+        <form class="form-horizontal" name="productForm" novalidate>
+
+    - on all previous modules we were using basic html tags like "form" tag shown above,
+    to create a data entry form in angular app, angular has set of directives that replace standard html elements.
+
+
+- Identify required fields
+
+- Mark Invalid Elements:
+    - mark invalid elements relies on 3 features:
+        1- ngClass directive
+        2- bootstrap styles
+        3- angular validation states
+
+        eg: ng-class="{'has-error':
+                productForm.inputProductName.$invalid}"
+
+                - has-error -> is bootstrap styles
+                - $invalid -> angular validation states
+
+        - ngClass Directive:
+            - allows sets a css class dynamically, based on an expression that defines the style classes
+            - the expression can be:
+                - "A string" contain space delimited class names
+                - "An Array" whose elements are string contain space delimited class names
+                - "An Object Literal" define a set of key value pairs eg: ng-class="{'has-error':productForm.inputProductName.$invalid}"
+                in this example the "key" is 'has-error' it is the name of the bootsTrap style class
+                "value" is an expression that is evaluated in this example productForm.inputProductName.$invalid
+
+                if the expression is truth the class name defined in the "key" is applied to the element
+
+
+        - Bootstrap validation styles:
+            - bootstrap provides several validation styles:
+                - .has-success style
+                - .has-warning style
+                - .has-error style
+
+        - angular validation states:
+            - angular provides a number of validation states.
+                - $pristine -> entry has not been changed
+                - $dirty -> entry hs been changed
+                - $valid -> entry is valid based on defined validation for the element
+                - $invalid -> entry is invalid based on defined validation for the element
+                - $error -> - all validations and whether they are valid or invalid
+                            - it is a set of key value pair
+                            - "key" is the name of validation role applied to the element
+                            - "Value" is a boolean, false -> if validation role is broken
+
+
+            - in order to use "angular validation states" in the form there are some pre-requisites:
+                1- form must have a name
+                2- input element must have a name
+                3- input element must include ngModel
+
+- Display Messages:
+    - there are many ways to display a validation messages:
+        1- Alert Box (Not Good) because it interrupts user entry flow, as the user has to respond immediately to the alert
+        2- validate message area in the form
+        3- adjacent to the input element
+
+    to display error message:
+        <span class="help-block has-error"
+                ng-show="productForm.inputProductName.$invalid"> Product name is required</span>
+
+
+- Angular Validation Directives
+    -ng-minlength -> min required length
+    -ng-maxlength
+    -ng-pattern -> validates an entry against certain pattern expression
+    -ng-change -> allows the definition of an expression that is evaluated when the content of input elements is changed, this allows custom validation code
+
+    -show different messages for diff error:
+        1-
+            - ng-messages
+            - it is directives that shows or hides messages based on key value pair
+            - similar to a switch or case statement
+
+            - ng-message
+            -it directive that defines specific cases
+            -not available until angular 1.3
+            <span class="help-block has-error">
+            <span ng-messages="productForm.pn.$error">
+                <span ng-message="required">required</span>
+                <span ng-message="minlength">min of 4 chars</span>
+                <span ng-message="maxlength">max of 12 chars</span>
+            </span>
+
+        2- using ng-show:
+          <span class="help-block has-error"
+            <span ng-show="productForm.inputProductName.$error.required"> Product Name is Required</span>
+            <span ng-show="productForm.inputProductName.$error.minlength"> must be 4 char</span>
+            <span ng-show="productForm.inputProductName.$error.maxlength"> can not exceed 12 chars</span>
+          </span>
+
+- Prevent Submit:
+    - disable the save button
+        ng-disabled="productForm.$invalid"
+
+    - display a message
+        ng-click="vm.submit(productForm.$valid)"
