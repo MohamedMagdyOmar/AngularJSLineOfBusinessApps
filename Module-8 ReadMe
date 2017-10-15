@@ -40,3 +40,15 @@
         2- insert a script tag into index.html
         3- register the service with a module
         4- write the service factory function
+
+    - Steps for using custom angular service:
+        1- inject the service
+            function productDetailCtrl(product, productService)
+            {
+            }
+
+        2- call the service
+            function productDetailCtrl(product, productService)
+                    {
+                        productService.calculateMarginPercent(price, cost);
+                    }

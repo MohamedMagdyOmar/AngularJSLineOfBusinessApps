@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="641c1b05-901e-4ea1-8ee1-5e923302c638" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/productManagement/common/services/productService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Module-8 ReadMe" afterPath="$PROJECT_DIR$/Module-8 ReadMe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/productManagement/index.html" afterPath="$PROJECT_DIR$/productManagement/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/productManagement/app/products/productDetailCtrl.js" afterPath="$PROJECT_DIR$/productManagement/app/products/productDetailCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/productManagement/app/products/productDetailView.html" afterPath="$PROJECT_DIR$/productManagement/app/products/productDetailView.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,10 +18,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/productManagement/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
+            <state relative-caret-position="630">
               <caret line="30" column="50" lean-forward="false" selection-start-line="30" selection-start-column="50" selection-end-line="30" selection-end-column="50" />
               <folding />
             </state>
@@ -32,18 +31,18 @@
       <file leaf-file-name="Module-8 ReadMe" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Module-8 ReadMe">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="652">
+              <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="productService.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="productService.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/productManagement/common/services/productService.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="58" column="36" lean-forward="false" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
+            <state relative-caret-position="294">
+              <caret line="30" column="57" lean-forward="true" selection-start-line="30" selection-start-column="57" selection-end-line="30" selection-end-column="57" />
               <folding>
                 <element signature="e#227#450#0" expanded="false" />
                 <element signature="e#512#675#0" expanded="false" />
@@ -54,11 +53,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Module-7 ReadMe" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Module-7 ReadMe">
+      <file leaf-file-name="productDetailCtrl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/productManagement/app/products/productDetailCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="116" column="37" lean-forward="false" selection-start-line="116" selection-start-column="37" selection-end-line="116" selection-end-column="37" />
+            <state relative-caret-position="378">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="productDetailView.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/productManagement/app/products/productDetailView.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="645">
+              <caret line="40" column="73" lean-forward="false" selection-start-line="40" selection-start-column="73" selection-end-line="40" selection-end-column="73" />
               <folding />
             </state>
           </provider>
@@ -67,28 +76,14 @@
       <file leaf-file-name="productsEditInfoView.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/productManagement/app/products/productsEditInfoView.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="88" column="59" lean-forward="false" selection-start-line="88" selection-start-column="59" selection-end-line="88" selection-end-column="59" />
+            <state relative-caret-position="333">
+              <caret line="81" column="32" lean-forward="true" selection-start-line="81" selection-start-column="32" selection-end-line="81" selection-end-column="32" />
               <folding>
                 <element signature="n#style#0;n#button#0;n#span#0;n#div#0;n#div#4;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#span#1;n#div#0;n#div#4;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
                 <marker date="1508052794017" expanded="true" signature="370:488" ph="{...}" />
                 <marker date="1508052794017" expanded="true" signature="370:489" ph="{...}" />
                 <marker date="1508052794017" expanded="true" signature="1595:1725" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="productsEditTagsView.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/productManagement/app/products/productsEditTagsView.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-630">
-              <caret line="0" column="47" lean-forward="false" selection-start-line="0" selection-start-column="47" selection-end-line="0" selection-end-column="47" />
-              <folding>
-                <element signature="n#style#0;n#button#0;n#span#0;n#div#1;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#span#0;n#div#0;n#div#2;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#span#1;n#div#0;n#div#2;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -150,12 +145,10 @@
         <option value="$PROJECT_DIR$/Module-3 ReadMe" />
         <option value="$PROJECT_DIR$/Module-4 ReadMe" />
         <option value="$PROJECT_DIR$/productManagement/app/welcomeView.html" />
-        <option value="$PROJECT_DIR$/productManagement/app/products/productDetailView.html" />
         <option value="$PROJECT_DIR$/productManagement/app/products/productsEditPriceView.html" />
         <option value="$PROJECT_DIR$/Module-5 ReadMe" />
         <option value="$PROJECT_DIR$/productManagement/app/products/ProductEditView.html" />
         <option value="$PROJECT_DIR$/productManagement/app/products/productListView.html" />
-        <option value="$PROJECT_DIR$/productManagement/app/products/productDetailCtrl.js" />
         <option value="$PROJECT_DIR$/productManagement/css/app.css" />
         <option value="$PROJECT_DIR$/productManagement/app/app.js" />
         <option value="$PROJECT_DIR$/Module-6 ReadMe" />
@@ -164,9 +157,11 @@
         <option value="$PROJECT_DIR$/productManagement/app/products/productsEditTagsView.html" />
         <option value="$PROJECT_DIR$/productManagement/app/products/ProductEditCtrl.js" />
         <option value="$PROJECT_DIR$/productManagement/app/products/productsEditInfoView.html" />
-        <option value="$PROJECT_DIR$/Module-8 ReadMe" />
         <option value="$PROJECT_DIR$/productManagement/index.html" />
         <option value="$PROJECT_DIR$/productManagement/common/services/productService.js" />
+        <option value="$PROJECT_DIR$/Module-8 ReadMe" />
+        <option value="$PROJECT_DIR$/productManagement/app/products/productDetailCtrl.js" />
+        <option value="$PROJECT_DIR$/productManagement/app/products/productDetailView.html" />
       </list>
     </option>
   </component>
@@ -208,6 +203,19 @@
               <item name="AngularJSLineOfBusinessApps" type="b2602c69:ProjectViewProjectNode" />
               <item name="AngularJSLineOfBusinessApps" type="462c0819:PsiDirectoryNode" />
               <item name="productManagement" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AngularJSLineOfBusinessApps" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AngularJSLineOfBusinessApps" type="462c0819:PsiDirectoryNode" />
+              <item name="productManagement" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AngularJSLineOfBusinessApps" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AngularJSLineOfBusinessApps" type="462c0819:PsiDirectoryNode" />
+              <item name="productManagement" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="products" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AngularJSLineOfBusinessApps" type="b2602c69:ProjectViewProjectNode" />
@@ -272,13 +280,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83442000" />
+    <option name="totallyTimeSpent" value="84499000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="960" y="0" width="960" height="1032" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38641188" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38641188" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33187774" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3363029" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -552,24 +560,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/productManagement/app/products/productDetailView.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="66" column="34" lean-forward="false" selection-start-line="66" selection-start-column="34" selection-end-line="66" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/productManagement/app/products/productsEditPriceView.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/productManagement/app/products/productDetailCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="38" lean-forward="false" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -629,52 +623,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Module-7 ReadMe">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="116" column="37" lean-forward="false" selection-start-line="116" selection-start-column="37" selection-end-line="116" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/productManagement/app/products/productsEditTagsView.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-630">
-          <caret line="0" column="47" lean-forward="false" selection-start-line="0" selection-start-column="47" selection-end-line="0" selection-end-column="47" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#span#0;n#div#1;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#span#0;n#div#0;n#div#2;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#span#1;n#div#0;n#div#2;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/productManagement/app/products/ProductEditCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="40" column="65" lean-forward="false" selection-start-line="40" selection-start-column="65" selection-end-line="40" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/productManagement/app/products/productsEditInfoView.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="88" column="59" lean-forward="false" selection-start-line="88" selection-start-column="59" selection-end-line="88" selection-end-column="59" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#span#0;n#div#0;n#div#4;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#span#1;n#div#0;n#div#4;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
-            <marker date="1508052794017" expanded="true" signature="370:488" ph="{...}" />
-            <marker date="1508052794017" expanded="true" signature="370:489" ph="{...}" />
-            <marker date="1508052794017" expanded="true" signature="1595:1725" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/productManagement/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="30" column="50" lean-forward="false" selection-start-line="30" selection-start-column="50" selection-end-line="30" selection-end-column="50" />
           <folding />
         </state>
       </provider>
@@ -687,24 +639,82 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Module-7 ReadMe">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="571">
+          <caret line="116" column="37" lean-forward="false" selection-start-line="116" selection-start-column="37" selection-end-line="116" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/productManagement/app/products/productsEditTagsView.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-357">
+          <caret line="0" column="47" lean-forward="false" selection-start-line="0" selection-start-column="47" selection-end-line="0" selection-end-column="47" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#span#0;n#div#1;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#span#0;n#div#0;n#div#2;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#span#1;n#div#0;n#div#2;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/productManagement/app/products/productsEditInfoView.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="81" column="32" lean-forward="true" selection-start-line="81" selection-start-column="32" selection-end-line="81" selection-end-column="32" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#span#0;n#div#0;n#div#4;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#span#1;n#div#0;n#div#4;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
+            <marker date="1508052794017" expanded="true" signature="370:488" ph="{...}" />
+            <marker date="1508052794017" expanded="true" signature="370:489" ph="{...}" />
+            <marker date="1508052794017" expanded="true" signature="1595:1725" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Module-8 ReadMe">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state relative-caret-position="652">
+          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/productManagement/common/services/productService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="58" column="36" lean-forward="false" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
+        <state relative-caret-position="294">
+          <caret line="30" column="57" lean-forward="true" selection-start-line="30" selection-start-column="57" selection-end-line="30" selection-end-column="57" />
           <folding>
             <element signature="e#227#450#0" expanded="false" />
             <element signature="e#512#675#0" expanded="false" />
             <element signature="e#743#982#0" expanded="false" />
             <element signature="e#1048#1244#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/productManagement/app/products/productDetailCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/productManagement/app/products/productDetailView.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="40" column="73" lean-forward="false" selection-start-line="40" selection-start-column="73" selection-end-line="40" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/productManagement/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="30" column="50" lean-forward="false" selection-start-line="30" selection-start-column="50" selection-end-line="30" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>
