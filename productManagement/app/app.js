@@ -49,6 +49,7 @@
             "ui.router",
             "ui.mask",
             "ui.bootstrap",
+            "angularCharts",
             "productResourceMock"]);
 
     //using strict inside IIFE, puts the entire content of the IIFE in strict mode
